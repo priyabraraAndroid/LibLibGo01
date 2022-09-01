@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dashboard.profile.ImageCroperActivity"
+    android:background="@color/black_fade"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/black_fade"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_close"
+                android:padding="6dp"
+                android:clickable="true"
+                app:tint="@color/white"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:onClick="onBack"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crop Image"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_toRightOf="@+id/iv_back"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="24dp"/>
+
+            <ImageView
+                android:id="@+id/iv_dobe"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_tick"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:onClick="onDone"
+                android:padding="2dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                app:tint="@color/white"/>
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.theartofdev.edmodo.cropper.CropImageView
+        android:id="@+id/cropImageView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+    <!--
+    app:cropInitialCropWindowPaddingRatio="0"
+    app:cropSnapRadius="0dp"
+
+    app:cropMaxCropResultHeightPX="1200"
+    app:cropMaxCropResultWidthPX="1600"
+    app:cropMinCropResultHeightPX="800"
+    app:cropMinCropResultWidthPX="400"
+
+    app:cropAspectRatioX="5"
+    app:cropAspectRatioY="5"
+    app:cropShape="oval"
+
+    app:cropAutoZoomEnabled="false"
+    app:cropScaleType="centerInside"
+    -->
+
+</LinearLayout>

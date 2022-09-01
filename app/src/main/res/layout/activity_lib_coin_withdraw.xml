@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LibCoinWithdrawActivity"
+    android:padding="24dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_close"
+                android:onClick="onBack"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Redeem LibCoin"
+                android:layout_centerHorizontal="true"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:background="@color/colorPrimary"
+                app:cardBackgroundColor="@color/colorPrimary"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="62dp">
+
+                    <TextView
+                        android:id="@+id/tvCoins"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Total LibCoins : 1000"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvNote"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lorem Ipsum Generator. Generate lorem ipsum in paragraphs, words or sentences. Optional html markup - paragraph, italic and bold tags."
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:layout_below="@+id/tvCoins"
+                        android:padding="24dp"
+                        android:textColor="@color/white"
+                        />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/card1"
+                android:layout_marginTop="-54dp"
+                android:layout_marginBottom="8dp"
+                >
+
+                <ImageView
+                    android:layout_width="300dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/amazon_gift_card"
+                    android:scaleType="centerCrop"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <Button
+                android:id="@+id/btnRedeem"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/card2"
+                android:layout_margin="16dp"
+                android:background="@drawable/btn_bg"
+                android:text="Redeem"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                />
+
+            <RelativeLayout
+                android:id="@+id/rlBankInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnRedeem"
+                android:visibility="invisible">
+
+                <LinearLayout
+                    android:id="@+id/ll1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Or"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Verify your UPI Id For Redeem Amount."
+                    android:layout_below="@+id/ll1"
+                    android:textSize="14sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"/>
+
+                <EditText
+                    android:id="@+id/etUpi"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_below="@+id/tvTxt"
+                    android:background="@drawable/et_otp_bg"
+                    android:layout_marginTop="16dp"
+                    android:hint="example@upi"
+                    android:textSize="14sp"
+                    android:paddingLeft="16dp"
+                    android:maxLines="1"
+                    />
+
+                <Button
+                    android:id="@+id/btnVerifyUpi"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_below="@+id/etUpi"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/btn_bg"
+                    android:text="Submit"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

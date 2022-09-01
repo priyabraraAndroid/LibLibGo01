@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "68124221596",
+    "project_id": "liblibgo-d677d",
+    "storage_bucket": "liblibgo-d677d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68124221596:android:f0c9768749a3363e838d59",
+        "android_client_info": {
+          "package_name": "com.lib.liblibgo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "68124221596-p2kqar7mgfephthnjriishganpdca6rj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lib.liblibgo",
+            "certificate_hash": "0db8eaefc66faef8a62a7ec489fcfd1098d1fe11"
+          }
+        },
+        {
+          "client_id": "68124221596-hnfd8mdbs9u8e7hl7gpuda35j6v5o4nr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRqDFqejFFRRYtNXc4Ggj4eHmHMTerqLs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "68124221596-hnfd8mdbs9u8e7hl7gpuda35j6v5o4nr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "68124221596-vo73r82og56p37566gbin7cfkdrnboph.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.Liblibgo"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

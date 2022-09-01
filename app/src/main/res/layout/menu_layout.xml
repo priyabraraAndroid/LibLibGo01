@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/MenuLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/colorPrimary"
+                    android:text="LibLibGo"
+                    android:textSize="22sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:letterSpacing="0.1"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:paddingTop="24dp"
+                    android:visibility="gone">
+
+
+                    <com.lib.liblibgo.views.MyTextView
+                        android:id="@+id/welcome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="Welcome"
+                        android:textColor="@color/white"
+                        android:textSize="22sp" />
+
+                    <com.lib.liblibgo.views.MyTextView
+                        android:id="@+id/UserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="USERNAME"
+                        android:layout_below="@+id/welcome"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+
+                </RelativeLayout>
+
+                <com.lib.liblibgo.views.MyTextView
+                    android:id="@+id/profile_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawableLeft="@drawable/ic_person"
+                    android:drawablePadding="8dp"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="Profile details"
+                    android:textSize="18sp"
+                    android:visibility="gone"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_light_secondary" />
+
+                <com.lib.liblibgo.views.MyTextView
+                    android:id="@+id/edit_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawableLeft="@drawable/ic_edit"
+                    android:drawablePadding="8dp"
+                    android:focusable="true"
+                    android:drawableTint="@color/colorPrimary"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="Edit Profile"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_light_secondary" />
+
+                <com.lib.liblibgo.views.MyTextView
+                    android:id="@+id/wishList"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawableLeft="@drawable/ic_fill_fav"
+                    android:drawablePadding="8dp"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:text="Wishlisted Books"
+                    android:paddingLeft="8dp"
+                    android:textSize="18sp"
+                    android:drawableTint="@color/colorPrimary"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_light_secondary"
+                    android:visibility="gone"/>
+
+                <com.lib.liblibgo.views.MyTextView
+                    android:id="@+id/gift_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawableLeft="@drawable/ic_giftcard"
+                    android:drawablePadding="8dp"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:text="My Gift Card"
+                    android:paddingLeft="8dp"
+                    android:textSize="18sp"
+                    android:visibility="gone"
+                    android:drawableTint="@color/colorPrimary"/>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_light_secondary" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@drawable/about_us"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="6dp"
+                        android:padding="1.5dp"
+                        app:tint="@color/colorPrimary"/>
+
+                    <com.lib.liblibgo.views.MyTextView
+                        android:id="@+id/aboutUs"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:text="About Us"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="2dp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_light_secondary" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@drawable/privacy"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="6dp"
+                        app:tint="@color/colorPrimary"/>
+
+                    <com.lib.liblibgo.views.MyTextView
+                        android:id="@+id/privacyPolicy"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:text="Privacy Policy"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="2dp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_light_secondary" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@drawable/accept"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="6dp"
+                        android:padding="1dp"
+                        app:tint="@color/colorPrimary"/>
+
+                    <com.lib.liblibgo.views.MyTextView
+                        android:id="@+id/termCondition"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:text="Terms &amp; Conditions"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="2dp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_light_secondary" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@drawable/contact"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="6dp"
+                        app:tint="@color/colorPrimary"
+                        android:padding="1dp"/>
+
+                    <com.lib.liblibgo.views.MyTextView
+                        android:id="@+id/contactUs"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:text="Contact Us"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="2dp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_light_secondary" />
+
+                <LinearLayout
+                    android:id="@+id/llSetting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@drawable/settings"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="6dp"
+                        app:tint="@color/colorPrimary"
+                        android:padding="1dp"/>
+
+                    <com.lib.liblibgo.views.MyTextView
+                        android:id="@+id/settings"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:text="Manage Alerts"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="2dp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/viewSetting"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_light_secondary" />
+
+                <com.lib.liblibgo.views.MyTextView
+                    android:id="@+id/log_out"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawableLeft="@drawable/ic_logout"
+                    android:drawablePadding="8dp"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="Logout"
+                    android:drawableTint="@color/colorPrimary"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="70dp"
+                    android:visibility="gone"/>
+
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="4dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="30dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/app_logo_new"
+                    android:scaleType="centerCrop"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

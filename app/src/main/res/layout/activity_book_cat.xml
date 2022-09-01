@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dashboard.book_details.BookCatActivity">
+
+    <include layout="@layout/toolbar_search"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabIndicatorColor="@color/white"
+        app:tabMode="fixed"
+        app:tabGravity="center"
+        app:tabPaddingEnd="16dp"
+        app:tabPaddingStart="16dp"
+        app:tabSelectedTextColor="@color/black"
+        app:tabTextColor="@color/white"
+        android:layout_marginTop="?attr/actionBarSize"
+        app:tabBackground="@drawable/tab_color_selector"
+        android:visibility="gone"
+        />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tab_layout"
+        android:visibility="gone"/>
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        >
+
+    </FrameLayout>
+
+</RelativeLayout>

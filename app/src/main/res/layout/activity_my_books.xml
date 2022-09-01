@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dashboard.apartment_admin.MyBooksActivity">
+
+    <include layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="vertical"
+               android:padding="8dp">
+
+               <!--<androidx.cardview.widget.CardView
+                   android:id="@+id/card"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   app:cardCornerRadius="4dp"
+                   android:layout_marginTop="8dp"
+                   android:layout_marginLeft="8dp"
+                   android:layout_marginBottom="8dp"
+                   android:layout_marginRight="8dp"
+                   >
+
+                   <RelativeLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="100dp"
+                       android:background="@color/white"
+                       android:padding="8dp">
+
+                       <ImageView
+                           android:id="@+id/vi_book"
+                           android:layout_width="80dp"
+                           android:layout_height="100dp"
+                           android:scaleType="centerCrop"
+                           android:src="@drawable/book1"
+                           android:padding="3dp"
+                           />
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical"
+                           android:layout_toRightOf="@+id/vi_book"
+                           android:layout_marginLeft="12dp"
+                           android:layout_centerVertical="true"
+                           android:layout_marginRight="8dp"
+                           android:layout_toLeftOf="@+id/iv_delete">
+
+                           <TextView
+                               android:id="@+id/tv_book"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Book Name"
+                               android:textColor="@color/black"
+                               android:textSize="14sp"
+                               android:textStyle="bold"
+                               android:maxLines="1"
+                               android:ellipsize="end"
+                               />
+                           <TextView
+                               android:id="@+id/tv_author"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Author Name"
+                               android:textSize="12sp"
+                               android:textStyle="normal"
+                               android:maxLines="1"
+                               android:ellipsize="end"
+                               />
+
+                           <TextView
+                               android:id="@+id/tv_isbn"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="isbn No - isbn-000"
+                               android:textSize="12sp"
+                               android:textStyle="normal"
+                               android:textColor="@color/green"
+                               />
+
+                           <TextView
+                               android:id="@+id/tv_publish_date"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Issues Date - 20/11/2021"
+                               android:textSize="12sp"
+                               android:textStyle="normal"
+                               android:visibility="visible"
+                               />
+
+                       </LinearLayout>
+
+                       <ImageView
+                           android:id="@+id/iv_delete"
+                           android:layout_width="34dp"
+                           android:layout_height="34dp"
+                           android:src="@drawable/ic_delete"
+                           android:padding="3dp"
+                           android:layout_alignParentEnd="true"
+                           android:layout_below="@+id/iv_edit"
+                           android:layout_marginTop="8dp"/>
+
+                       <ImageView
+                           android:id="@+id/iv_edit"
+                           android:layout_width="34dp"
+                           android:layout_height="34dp"
+                           android:src="@drawable/ic_edit"
+                           android:padding="3dp"
+                           android:layout_marginTop="8dp"
+                           android:layout_alignParentEnd="true"
+                           android:onClick="onEditBook"/>
+
+                   </RelativeLayout>
+
+               </androidx.cardview.widget.CardView>-->
+               <androidx.recyclerview.widget.RecyclerView
+                   android:id="@+id/rvBooks"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:paddingBottom="70dp"
+                   />
+
+               <ProgressBar
+                   android:id="@+id/progBar"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_centerInParent="true"
+                   android:visibility="gone"
+                   />
+
+           </RelativeLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:weightSum="2"
+        android:layout_margin="20dp">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg"
+            android:text="Add Books"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:onClick="onAddBooks"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg"
+            android:text="Bulk Upload"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="10dp"
+            android:onClick="uploadFile"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

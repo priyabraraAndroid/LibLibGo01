@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="4dp"
+        android:layout_margin="6dp"
+        android:elevation="4dp"
+        app:cardBackgroundColor="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/tv_book_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Book No : BOOK0251"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_marginRight="120dp"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_book_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Book Name : My Book"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/green"
+                    android:layout_below="@+id/tv_book_no"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_auth_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Book Author : Shakear"
+                    android:textSize="15sp"
+                    android:layout_below="@+id/tv_book_name"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_return_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Returned"
+                    android:textSize="13sp"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_view_details"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:text="View Detail"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_below="@+id/rl"
+                android:gravity="center"
+                android:background="@color/grey_light_secondary"
+                />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:id="@+id/ll_click">
+
+    <com.lib.liblibgo.views.MyTextView
+        android:id="@+id/tvApartmentName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:minHeight="45dp"
+        android:padding="5dp"
+        android:text="Demo"
+        android:textSize="13sp"
+        android:letterSpacing="0.1"
+        android:singleLine="true"
+        android:ellipsize="end"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#22000000" />
+</LinearLayout>

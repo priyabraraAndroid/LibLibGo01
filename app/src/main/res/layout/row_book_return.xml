@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/bg_border_apatment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@drawable/bg_border_apatment"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <com.lib.liblibgo.views.MyTextView
+            android:id="@+id/tvBookNumber"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="Book-No : Book-000111"/>
+
+        <com.lib.liblibgo.views.MyTextView
+            android:id="@+id/tvBookName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:text="Book Name : Book Name"/>
+
+        <com.lib.liblibgo.views.MyTextView
+            android:id="@+id/tvAuthorName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:text="Author Name : Author Name"/>
+
+        <com.lib.liblibgo.views.MyTextView
+            android:id="@+id/tvSelfName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:text="Shelf No - C-0015"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.lib.liblibgo.views.MyTextView
+                android:id="@+id/tvIssueDate"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:textSize="16sp"
+                android:text="Return Date : 20 Jul 2021"/>
+
+            <com.lib.liblibgo.views.MyButton
+                android:id="@+id/tvReturnDate"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:minHeight="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text="Return"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:background="@drawable/btn_bg"
+                android:padding="5dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

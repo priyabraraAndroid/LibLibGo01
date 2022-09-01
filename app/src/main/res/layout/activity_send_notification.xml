@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".dashboard.apartment_admin.SendNotification">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.lib.liblibgo.views.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Choose Customer"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/customerNameTv"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Vicky Singh"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:textSize="14sp"
+            android:background="@drawable/bg_rectangle"
+            android:layout_marginTop="5dp"/>
+
+        <com.lib.liblibgo.views.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <com.lib.liblibgo.views.MyEditText
+            android:id="@+id/etTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_rectangle"
+            android:hint="Enter title"
+            android:inputType="text"
+            android:imeOptions="flagNoExtractUi|actionNext"
+            android:minHeight="45dp"
+            android:padding="8dp"
+            android:textSize="14sp" />
+
+        <com.lib.liblibgo.views.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Message"
+            android:textStyle="bold"
+            />
+
+        <com.lib.liblibgo.views.MyEditText
+            android:id="@+id/etmsg"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_rectangle"
+            android:inputType="text"
+            android:gravity="start|top"
+            android:imeOptions="actionDone"
+            android:hint="Type your message"
+            android:minHeight="45dp"
+            android:padding="8dp"
+            android:textSize="14sp" />
+
+        <com.lib.liblibgo.views.MyButton
+            android:id="@+id/sendBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:minHeight="50dp"
+            android:text="Send"
+            android:background="@drawable/btn_bg"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</LinearLayout>

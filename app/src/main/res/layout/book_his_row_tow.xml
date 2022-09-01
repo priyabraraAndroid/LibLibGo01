@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="4dp"
+        android:layout_margin="6dp"
+        android:elevation="4dp"
+        app:cardBackgroundColor="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tv_book_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Book No : BOOK0251"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginRight="120dp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                />
+
+            <TextView
+                android:id="@+id/tv_book_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Book Name : My Book"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/green"
+                android:layout_below="@+id/tv_book_no"
+                />
+
+            <TextView
+                android:id="@+id/tv_auth_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Book Author : Shakear"
+                android:textSize="15sp"
+                android:layout_below="@+id/tv_book_name"
+                />
+
+            <TextView
+                android:id="@+id/tv_issue_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Issue Date : 2021-02-12"
+                android:textSize="15sp"
+                android:layout_below="@+id/tv_auth_name"
+                />
+
+            <TextView
+                android:id="@+id/tv_return_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Return Date : 2021-02-12"
+                android:textSize="15sp"
+                android:layout_below="@+id/tv_issue_date"
+                />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

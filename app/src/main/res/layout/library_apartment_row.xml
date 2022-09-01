@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="4dp"
+        android:layout_marginBottom="8dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            >
+
+            <ImageView
+                android:id="@+id/vi_book"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/auther3"
+                android:padding="3dp"
+                android:layout_centerVertical="true"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_toRightOf="@+id/vi_book"
+                android:layout_marginLeft="12dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/ivPhone"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_library_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vicky Library"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    />
+
+
+
+                <TextView
+                    android:id="@+id/tv_owner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vicky Singh"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_num_users"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 user joined"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_adr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Saltlake,Sactor-V,Kolkata,700091"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    android:visibility="gone"
+                    />
+
+                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                    android:id="@+id/lib_rating"
+                    android:layout_width="90dp"
+                    android:layout_height="16dp"
+                    style="@style/Widget.MaterialRatingBar.RatingBar"
+                    app:mrb_progressTint="@color/colorPrimary"
+                    app:mrb_progressTintMode="src_in"
+                    app:mrb_secondaryProgressTint="@color/colorPrimary"
+                    android:layout_below="@+id/tv_rate"
+                    android:rating="5.0"
+                    android:visibility="gone"
+                    />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivPhone"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_phone"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="12dp"
+                android:padding="4dp"
+                app:tint="@color/green"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnJoin"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="36dp"
+                android:text="Join"
+                android:background="@drawable/btn_bg"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:layout_marginBottom="4dp"
+                android:layout_marginRight="4dp"
+                android:visibility="visible"
+                />
+
+            <ImageView
+                android:id="@+id/ivEdit"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:src="@drawable/ic_edit"
+                app:tint="@color/colorPrimary"
+                android:layout_alignParentEnd="true"
+                android:padding="4dp"
+                android:layout_marginRight="12dp"
+                android:clickable="true"
+                android:visibility="gone"
+                android:layout_marginTop="4dp"
+                android:background="?attr/selectableItemBackgroundBorderless"/>
+
+            <TextView
+                android:id="@+id/tvCount"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/badge_count_bg"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="14dp"
+                android:layout_below="@+id/ivEdit"
+                android:text="0"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_marginTop="2dp"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

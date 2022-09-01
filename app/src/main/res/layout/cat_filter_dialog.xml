@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <View
+            android:id="@+id/view_one"
+            android:layout_width="110dp"
+            android:layout_height="3dp"
+            android:background="#E6E4E4"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filter Books"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/view_one"
+            android:layout_marginTop="16dp"
+            />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            android:layout_below="@+id/tv"
+            android:layout_marginTop="16dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/rl_search"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="40dp">
+
+                <TextView
+                    android:id="@+id/tvCats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Categories"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvCats"
+                    android:layout_marginTop="8dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+                    <ProgressBar
+                        android:id="@+id/progBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="50dp"
+                        android:visibility="gone"
+                        />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/tvNearMe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Nearby"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="16dp"
+                    android:visibility="gone"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/ll1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:layout_marginTop="8dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/tvApartment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Within Community"
+                        android:padding="14dp"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:textStyle="normal"
+                        android:background="@drawable/btn_bg_grey"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/tvArea"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:text="Within Area"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:textStyle="normal"
+                        android:textAlignment="center"
+                        android:background="@drawable/btn_bg_grey"
+                        android:gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:layout_centerInParent="true"/>
+
+                    <TextView
+                        android:id="@+id/tvCity"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:text="Within City"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:textStyle="normal"
+                        android:layout_marginLeft="8dp"
+                        android:textAlignment="center"
+                        android:background="@drawable/btn_bg_grey"
+                        android:gravity="center"
+                        android:layout_centerInParent="true"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll2"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:layout_marginTop="6dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv2km"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:text="Within 2Km"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:textStyle="normal"
+                        android:background="@drawable/btn_bg_grey"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/tv5km"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:text="Within 5km"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:textStyle="normal"
+                        android:textAlignment="center"
+                        android:background="@drawable/btn_bg_grey"
+                        android:gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:layout_centerInParent="true"/>
+
+                    <TextView
+                        android:id="@+id/tv10km"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:text="Within 10km"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:textStyle="normal"
+                        android:layout_marginLeft="8dp"
+                        android:textAlignment="center"
+                        android:background="@drawable/btn_bg_grey"
+                        android:gravity="center"
+                        android:layout_centerInParent="true"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Type"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="16dp"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvForRent"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                        android:background="@drawable/btn_bg_grey"
+                        android:text="For Rent"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvForSale"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                        android:background="@drawable/btn_bg_grey"
+                        android:text="For Buy"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:layout_marginLeft="12dp"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tvForBoth"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                        android:background="@drawable/btn_bg_grey"
+                        android:text="Buy &amp; Rent"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:layout_marginTop="2dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvForGiveaway"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                        android:background="@drawable/btn_bg_grey"
+                        android:text="Giveaway Books"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="2dp"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_close"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:padding="3dp"
+        android:layout_alignParentEnd="true"
+        android:background="?attr/selectableItemBackgroundBorderless"/>
+
+    <Button
+        android:id="@+id/btnApply"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="16dp"
+        android:text="Apply"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        android:background="@drawable/btn_bg"
+        android:layout_marginBottom="28dp"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

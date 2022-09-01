@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <View
+        android:id="@+id/view_one"
+        android:layout_width="110dp"
+        android:layout_height="3dp"
+        android:background="#E6E4E4"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sort By"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/view_one"
+        android:layout_marginTop="12dp"
+        />
+
+    <RadioGroup
+        android:id="@+id/rgSort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <RadioButton
+            android:id="@+id/rb_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Popularity"
+            android:textSize="14sp"
+            android:buttonTint="@color/colorPrimary"
+            android:clickable="true"
+            android:background="?attr/selectableItemBackground"
+            android:layout_marginHorizontal="16dp"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A-Z"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:buttonTint="@color/colorPrimary"
+            android:clickable="true"
+            android:background="?attr/selectableItemBackground"
+            android:layout_marginHorizontal="16dp"/>
+
+        <RadioButton
+            android:id="@+id/rb_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Price low-high"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:buttonTint="@color/colorPrimary"
+            android:clickable="true"
+            android:background="?attr/selectableItemBackground"
+            android:layout_marginHorizontal="16dp"/>
+
+        <RadioButton
+            android:id="@+id/rb_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Price high-low"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:buttonTint="@color/colorPrimary"
+            android:clickable="true"
+            android:background="?attr/selectableItemBackground"
+            android:layout_marginHorizontal="16dp"/>
+
+        <RadioButton
+            android:id="@+id/rb_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:buttonTint="@color/colorPrimary"
+            android:clickable="true"
+            android:background="?attr/selectableItemBackground"
+            android:layout_marginHorizontal="16dp"/>
+
+
+    </RadioGroup>
+
+</LinearLayout>

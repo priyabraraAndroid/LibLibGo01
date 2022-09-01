@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".dashboard.book_details.fragments.OwnBooksFrag">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:id="@+id/rlFilterLayout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:background="@color/white"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/rlLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_toRightOf="@+id/tv5"
+                android:background="@drawable/et_otp_bg"
+                android:padding="4dp"
+                android:gravity="center"
+                android:layout_marginTop="4dp"
+                android:layout_centerVertical="true"
+                >
+
+                <ImageView
+                    android:id="@+id/markerIv"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_arrow_forward"
+                    android:layout_marginRight="6dp"
+                    android:layout_toRightOf="@+id/tvRange"
+                    android:rotation="90"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:id="@+id/tvRange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Books4U"
+                    android:textSize="12sp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlType"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_toRightOf="@+id/rlLocation"
+                android:background="@drawable/et_otp_bg"
+                android:padding="4dp"
+                android:gravity="center"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_centerVertical="true"
+                >
+
+                <ImageView
+                    android:id="@+id/markerIv2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_arrow_forward"
+                    android:layout_marginRight="6dp"
+                    android:layout_toRightOf="@+id/tvType"
+                    android:rotation="90"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:id="@+id/tvType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Buy Or Rent"
+                    android:textSize="12sp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_toRightOf="@+id/rlType"
+                android:background="@drawable/et_otp_bg"
+                android:padding="4dp"
+                android:gravity="center"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_centerVertical="true"
+                >
+
+                <ImageView
+                    android:id="@+id/markerIv3"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_arrow_forward"
+                    android:layout_marginRight="6dp"
+                    android:layout_toRightOf="@+id/tvCategory"
+                    android:rotation="90"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:id="@+id/tvCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Category"
+                    android:textSize="12sp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"/>
+
+            </RelativeLayout>
+
+            <!--<LinearLayout
+                android:id="@+id/llFilter"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_circular"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ivFilter"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_baseline_tune_24"
+                    android:padding="10dp"
+                    app:tint="@color/white"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    />
+
+            </LinearLayout>-->
+
+            <ImageView
+                android:id="@+id/icClearFilter"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_toRightOf="@+id/rlCategory"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/ic_refresh"
+                android:padding="6dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:background="@drawable/et_otp_bg"/>
+
+        </RelativeLayout>
+
+    </HorizontalScrollView>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:id="@+id/pullToRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/horizontal"
+        >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_marginTop="4dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <ProgressBar
+                android:id="@+id/progBarr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddBooks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_add"
+        android:tint="@color/white"/>
+
+</RelativeLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivCard"
+                android:layout_width="110dp"
+                android:layout_height="80dp"
+                android:src="@drawable/amazon_gift_card"
+                android:scaleType="fitXY"/>
+
+            <TextView
+                android:id="@+id/tvValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@+id/ivCard"
+                android:text="\u20B9 2000"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvValueTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gift Card"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_toRightOf="@+id/tvValue"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="12dp"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivCard"
+                android:layout_marginLeft="6dp"
+                android:layout_below="@+id/tvValueTxt"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/et_otp_bg"
+                android:layout_marginRight="8dp">
+
+                <TextView
+                    android:id="@+id/tvCoupon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="AXVTYSW01VG"
+                    android:gravity="center"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:ellipsize="end"
+                    />
+
+                <ImageView
+                    android:id="@+id/ivCopy"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="6dp"
+                    android:clickable="true"
+                    android:layout_marginRight="6dp"
+                    android:src="@drawable/copy"
+                    app:tint="@color/colorPrimary"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    />
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

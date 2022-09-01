@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_round_gradient"
+    android:backgroundTint="@color/gray"
+    >
+
+    <TextView
+        android:id="@+id/tvApartment"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Within Community"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp"
+        />
+
+    <TextView
+        android:id="@+id/tvArea"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Within Area"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/tvCity"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Within City"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/tvTwoKm"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="2km"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/tvThreeKm"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="5km"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/tvFiveKm"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="10km"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/tvMyLibrary"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="My Library"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+
+
+    <TextView
+        android:id="@+id/tvAll"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="All"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+
+</LinearLayout>

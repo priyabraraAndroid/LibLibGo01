@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_round_gradient"
+    android:backgroundTint="@color/gray"
+    >
+
+    <TextView
+        android:id="@+id/tvIssuedBooks"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Borrowed"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:paddingHorizontal="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tvmyOrders"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Lent"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp"
+        android:paddingHorizontal="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tvReturnBooks"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Bought"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp"
+        android:paddingHorizontal="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tvUnReviewed"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Sold"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:paddingHorizontal="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp"
+        />
+
+    <TextView
+        android:id="@+id/tvAll"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="All Orders"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:paddingHorizontal="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="8dp"
+        />
+
+</LinearLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="18dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="4dp"
+        android:layout_gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/greenree_logo"
+            android:scaleType="centerCrop"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.lib.liblibgo.views.MyTextView
+        android:id="@+id/myTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Profile Details"
+        android:textColor="@color/black" />
+
+    <com.lib.liblibgo.views.MyEditText
+        android:id="@+id/regName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_rectangle"
+        android:hint="Enter Name"
+        android:inputType="textEmailAddress"
+        android:minHeight="45dp"
+        android:paddingLeft="15dp"
+        android:textSize="14sp" />
+
+    <com.lib.liblibgo.views.MyEditText
+        android:id="@+id/regEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_rectangle"
+        android:hint="Email Address"
+        android:inputType="textAutoComplete"
+        android:minHeight="45dp"
+        android:paddingLeft="15dp"
+        android:textSize="14sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_rectangle">
+
+        <TextView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="+91"/>
+
+        <com.lib.liblibgo.views.MyEditText
+            android:id="@+id/regPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Phone"
+            android:inputType="numberDecimal"
+            android:minHeight="45dp"
+            android:paddingLeft="15dp"
+            android:textSize="14sp"
+            android:background="@null"/>
+
+
+    </LinearLayout>
+
+
+    <Spinner
+        android:id="@+id/regApartment"
+        android:background="@drawable/bg_rectangle"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="15dp"/>
+
+    <com.lib.liblibgo.views.MyEditText
+        android:id="@+id/regFlat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_rectangle"
+        android:hint="Enter Flat no "
+        android:minHeight="45dp"
+        android:inputType="textAutoComplete"
+        android:textSize="14sp"
+        android:paddingLeft="15dp"/>
+    <com.lib.liblibgo.views.MyEditText
+        android:id="@+id/regPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_rectangle"
+        android:hint="Enter Password"
+        android:minHeight="45dp"
+        android:inputType="textPassword"
+        android:textSize="14sp"
+        android:padding="15dp" />
+
+
+    <com.lib.liblibgo.views.MyButton
+        android:id="@+id/RegBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#3A9B3E"
+        android:minHeight="50dp"
+        android:text="REGISTER"
+        android:textColor="@color/white" />
+
+    <com.lib.liblibgo.views.MyButton
+        android:id="@+id/alreadyBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:minHeight="50dp"
+        android:text="Back To Login"
+        android:textColor="@color/white" />
+
+
+
+
+</LinearLayout>

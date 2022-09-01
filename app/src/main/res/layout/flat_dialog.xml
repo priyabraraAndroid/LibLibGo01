@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <View
+            android:id="@+id/view_one"
+            android:layout_width="110dp"
+            android:layout_height="3dp"
+            android:background="#E6E4E4"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Door Number"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/view_one"
+            android:layout_marginTop="16dp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rl_search"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/tv"
+            android:layout_margin="16dp"
+            android:background="@drawable/bg_search"
+            >
+
+            <ImageView
+                android:id="@+id/iv_serach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_search"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"/>
+
+
+            <EditText
+                android:id="@+id/et_search_country"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Search your door number"
+                android:layout_toRightOf="@+id/iv_serach"
+                android:layout_marginLeft="16dp"
+                android:background="@null"
+                android:textSize="16sp"
+                />
+
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="vertical"
+            android:layout_below="@+id/rl_search"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_below="@+id/rl_search"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+
+                <ProgressBar
+                    android:id="@+id/progBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

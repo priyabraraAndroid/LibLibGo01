@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dashboard.book_details.CommunityBookDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:background="@drawable/no_img"
+            android:scaleType="centerCrop"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/ivWishList"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@drawable/ic_fav"
+            android:padding="4dp"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="18dp"
+            android:clickable="true"
+            android:visibility="invisible"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:layout_below="@+id/rl_banner"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_banner"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="100dp">
+
+            <TextView
+                android:id="@+id/book_name"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:text="Book Name"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/book_author"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:text="Author Name"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:layout_below="@+id/book_name"
+                />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginRight="8dp"
+                >
+                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                    android:id="@+id/rating"
+                    android:layout_width="80dp"
+                    android:layout_height="18dp"
+                    style="@style/Widget.MaterialRatingBar.RatingBar"
+                    app:mrb_progressTint="@color/colorPrimaryDark"
+                    app:mrb_progressTintMode="src_in"
+                    app:mrb_secondaryProgressTint="@color/colorPrimaryDark"
+                    android:rating="4.5"
+                    android:layout_marginTop="6dp"
+                    android:clickable="false"
+                    android:focusable="false"/>
+
+                <TextView
+                    android:id="@+id/tv_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(4.5)"
+                    android:textSize="12sp"
+                    android:layout_marginTop="2dp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/book_description"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_below="@+id/book_author"
+                android:layout_marginTop="16dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+                android:textSize="12sp"
+                android:layout_below="@+id/book_description"
+                android:layout_marginTop="8dp"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:layout_below="@+id/tv_details"
+                >
+                <TextView
+                    android:id="@+id/tv_name_review"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="All Reviews"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginRight="72dp"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_review"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/tv_name_review"/>
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_name_review"
+                    android:layout_marginTop="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/ll_no_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/tv_name_review"
+                    android:gravity="center"
+                    android:layout_marginTop="68dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:src="@drawable/ic_no_data"
+                        app:tint="@color/grey_light_secondary"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:text="No review found !"
+                        android:textColor="@color/grey_light_secondary"
+                        android:textStyle="bold"
+                        />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone"
+        >
+
+        <Button
+            android:id="@+id/btn_book_now"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:text="Issue Now"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:background="@drawable/btn_bg"
+            android:visibility="visible"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bookOutOfStock"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:backgroundTint="@color/red"
+        android:layout_margin="24dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Book Out Of Stock"
+            android:textSize="13sp"
+            android:layout_weight="1"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textStyle="normal"
+            android:background="@drawable/btn_bg"
+            android:backgroundTint="@color/red"
+            android:gravity="center"
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:id="@+id/tvNotify"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Notify"
+            android:textSize="13sp"
+            android:layout_weight="1"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textStyle="normal"
+            android:background="@drawable/btn_bg"
+            android:backgroundTint="@color/colorPrimary"
+            android:gravity="center"
+            android:layout_marginLeft="16dp"
+            />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/no_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="visible">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/colorPrimaryDark"/>
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:src="@drawable/ic_back"
+        app:tint="@color/black"
+        android:layout_margin="20dp"
+        android:clickable="true"
+        android:padding="4dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:onClick="onBack"
+        />
+
+</RelativeLayout>

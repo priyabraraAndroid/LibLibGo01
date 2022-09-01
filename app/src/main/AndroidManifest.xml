@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.lib.liblibgo">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.READ_SMS"
+        tools:node="remove" />
+    <uses-permission
+        android:name="android.permission.WRITE_SMS"
+        tools:node="remove" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" /> <!-- <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" /> -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:fullBackupOnly="false"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/greenree_logo"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/logo_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GreenReeUser"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:allowBackup">
+        <activity android:name=".dashboard.book_upload.UploadBookActivity"></activity>
+        <activity android:name=".dashboard.profile.BookImageCropperActivity" />
+        <activity android:name=".dashboard.profile.OrderDetailsActivityNew" />
+        <activity android:name=".dashboard.library.RequestedLibraryActivity" />
+        <activity android:name=".dashboard.apartment_admin.StackBookUpload" />
+        <activity android:name=".dashboard.profile.ImageCroperActivity" />
+        <activity android:name=".dashboard.library.EditLibraryActivity" />
+        <activity android:name=".dashboard.library.CommunityLibraryRulesActivity" />
+        <activity android:name=".dashboard.trackingbooks.TrackingDetailsActivity" />
+        <activity android:name=".dashboard.trackingbooks.TrackMyBooksActivity" />
+        <activity android:name=".dashboard.book_details.CommunityBookDetailsActivity" />
+        <activity android:name=".dashboard.apartment_admin.ManageCommunityUsersActivity" />
+        <activity android:name=".dashboard.book_collect.CollectApartmentBooksActivity" />
+        <activity android:name=".dashboard.library.SearchLibraryActivity" />
+        <activity android:name=".dashboard.apartment_admin.QRCodeScannerActivity" />
+        <activity android:name=".activity.MyGiftCardActivity" />
+        <activity android:name=".activity.LibCoinWithdrawActivity" />
+        <activity android:name=".activity.UserProfileActivity" />
+        <activity android:name=".dashboard.book_details.OrderDetailsActivity" />
+        <activity android:name=".activity.NewUserDetailsActivity" />
+        <activity android:name=".activity.NewRegistrationActivity" />
+        <activity android:name=".dashboard.apartment_admin.MyBooksActivity" />
+        <activity android:name=".dashboard.apartment_admin.BookHistoryActivity" />
+        <activity android:name=".activity.SettingsActivity" />
+        <activity android:name=".dashboard.book_details.WishListActivity" />
+        <activity android:name=".dashboard.library.CreateLibraryActivity" />
+        <activity android:name=".dashboard.apartment_admin.ManageLibraryActivity" />
+        <activity android:name=".dashboard.book_details.BookCatActivity" />
+        <activity android:name=".dashboard.library.LibraryActivity" />
+        <activity android:name=".dashboard.book_details.ThankyouActivity" />
+        <activity android:name=".dashboard.book_details.CheckoutActivity" />
+        <activity android:name=".dashboard.book_details.AddressActivity" />
+        <activity android:name=".dashboard.book_details.CartActivity" />
+        <activity android:name=".activity.ContactUsActivity" />
+        <activity android:name=".activity.NewHomeActivity" />
+        <activity android:name=".activity.PrivacyPolicyActivity" />
+        <activity
+            android:name=".activity.UpdateUserProfile"
+            android:resizeableActivity="false"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity android:name=".dashboard.apartment_admin.UploadBookDetails" />
+        <activity android:name=".dashboard.apartment_admin.CustomerBookHistory" />
+        <activity android:name=".dashboard.apartment_admin.ImageGallery" />
+        <activity android:name=".dashboard.apartment_admin.BookListActivity" />
+        <activity android:name=".dashboard.apartment_admin.ManageCutomer" />
+        <activity android:name=".dashboard.apartment_admin.SendNotification" />
+        <activity android:name=".dashboard.apartment_admin.CutomerBookHistoryReport" />
+        <activity android:name=".dashboard.apartment_admin.BookHistoryReport" />
+        <activity android:name=".dashboard.apartment_admin.AddApartmentActivity" />
+        <activity android:name=".dashboard.apartment_admin.AppartmentActivity" />
+        <activity android:name=".dashboard.profile.DashboardActivity" />
+        <activity android:name=".dashboard.apartment_admin.SubAdminDashboard" />
+        <activity
+            android:name=".activity.NewRegistration"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".activity.LoginWithEmail"
+            android:resizeableActivity="false"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity android:name=".activity.UserDetails" />
+        <activity android:name=".activity.VerifyOtp" />
+        <activity
+            android:name=".activity.LoginWithPhoneNumber"
+            android:resizeableActivity="false"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity android:name=".dashboard.book_details.BookDetails" />
+        <activity android:name=".activity.SearchActivity" />
+        <activity android:name=".dashboard.apartment_admin.SingUpApartmentAdminActivity" />
+        <activity
+            android:name=".dashboard.book_collect.CollectBookActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.homedashboard.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.ForgotActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.SplashActivity"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".dashboard.book_return.ReturnBookActivity" />
+        <activity android:name=".dashboard.return_history.ReturnHistoryActivity" />
+        <activity android:name=".dashboard.profile.ProfileActivity" />
+        <activity android:name=".dashboard.notification.NotificationActivity" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <service android:name=".notification.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".notification.FirebaseIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_noti_bell" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorPrimaryDark" />
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_live_xIyK82spLYOlFZ" /> <!-- Test_Key: rzp_test_ab0c3Odp7tRGlJ -->
+        <!-- Live_Key: rzp_live_xIyK82spLYOlFZ -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.provider.cartoonprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

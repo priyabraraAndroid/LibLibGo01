@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/dialog_round_gradient"
+    android:backgroundTint="@color/white"
+    android:padding="24dp">
+
+    <ImageView
+        android:id="@+id/ivCard"
+        android:layout_width="180dp"
+        android:layout_height="100dp"
+        android:src="@drawable/amazon_gift_card"
+        android:layout_centerHorizontal="true"
+        />
+
+    <LinearLayout
+        android:id="@+id/llQty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/ivCard"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1000 LibCoins"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/bg_search">
+
+            <ImageView
+                android:id="@+id/ivMinus"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_minus"
+                android:padding="3dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                app:tint="@color/white"
+                android:background="@color/colorPrimary"
+                android:layout_margin="1dp"
+                />
+
+            <TextView
+                android:id="@+id/tvQty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                />
+
+            <ImageView
+                android:id="@+id/ivPlus"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_add"
+                android:padding="3dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                app:tint="@color/white"
+                android:background="@color/colorPrimary"
+                android:layout_margin="1dp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_done"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/btn_bg"
+        android:text="Redeem"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:layout_marginBottom="8dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/llQty"
+        android:visibility="visible"
+        />
+
+    <ProgressBar
+        android:id="@+id/progBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/llQty"
+        android:layout_marginTop="22dp"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:src="@drawable/ic_close"
+        android:layout_alignParentEnd="true"
+        android:padding="6dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_marginTop="-10dp"
+        android:layout_marginRight="-10dp"
+        />
+
+</RelativeLayout>

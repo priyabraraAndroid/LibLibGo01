@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="4dp"
+        android:layout_margin="4dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="2dp"
+        android:clickable="true"
+        android:background="?attr/selectableItemBackgroundBorderless">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name : Vicky Singh"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email : abc@gmail.com"
+                    android:textSize="15sp"
+                    android:layout_below="@+id/tv_name"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone no : 9046894517"
+                    android:textSize="15sp"
+                    android:layout_below="@+id/tv_email"
+                    />
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Return status : Book Submitted"
+                    android:textSize="15sp"
+                    android:layout_below="@+id/tv_apartment_name"
+                    android:textColor="@color/red"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_flat_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FLAT No : 09098"
+                    android:textSize="15sp"
+                    android:layout_below="@+id/tv_phone"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_apartment_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Apartment Name : Vicky Singh"
+                    android:textSize="15sp"
+                    android:layout_below="@+id/tv_flat_no"
+                    />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_msg_customer"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="@color/colorPrimary"
+                android:text="Message Customer"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

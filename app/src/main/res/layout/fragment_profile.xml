@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.homedashboard.fragmentshome.ProfileFragment"
+    android:background="@color/white"
+    android:id="@+id/drawer"
+    tools:openDrawer="left"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary">
+
+
+            <ImageView
+                android:id="@+id/ivMenu"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_menu"
+                android:padding="4dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                app:tint="@color/white"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                />
+
+
+            <com.lib.liblibgo.views.MyTextView
+                android:id="@+id/titleTool"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:text="My Account"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@+id/ivMenu"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize">
+
+            <RelativeLayout
+                android:id="@+id/rlLoginUser"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/rlProfileView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:background="@color/white"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/editProfileLl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_edit"
+                            app:tint="@color/colorPrimary"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Edit Profile"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"/>
+
+                    </LinearLayout>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivUser"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/no_img"
+                        app:civ_border_width="2dp"
+                        app:civ_border_color="@color/colorPrimary"
+                        android:layout_centerHorizontal="true"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="16dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/ivUser"
+                        android:layout_marginTop="16dp">
+
+                        <TextView
+                            android:id="@+id/tvName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Guest User"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:layout_gravity="center_horizontal"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvPhone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+91 9046894517"
+                            android:textSize="13sp"
+                            android:textStyle="normal"
+                            android:layout_gravity="center_horizontal"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvAdr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="College more, sector-v, saltlake, kolkata, 723133"
+                            android:textSize="13sp"
+                            android:textStyle="normal"
+                            android:gravity="center"
+                            android:layout_gravity="center_horizontal"
+                            />
+
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="vertical"
+                            android:layout_gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Total Lib Coins"
+                                android:textSize="12sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:layout_marginTop="4dp"
+                                android:layout_gravity="center"
+                                android:textAllCaps="true"
+                                android:backgroundTint="@color/gray"
+                                />
+
+                            <TextView
+                                android:id="@+id/tvLibCoins"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="200"
+                                android:textSize="32sp"
+                                android:textColor="@color/colorPrimary"
+                                android:textStyle="bold"
+                                android:layout_marginTop="4dp"
+                                android:layout_gravity="center"
+                                android:backgroundTint="@color/gray"
+                                />
+
+                            <TextView
+                                android:id="@+id/tvRedeem"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Redeem"
+                                android:textSize="14sp"
+                                android:textColor="@color/white"
+                                android:textStyle="normal"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:paddingLeft="39dp"
+                                android:paddingRight="39dp"
+                                android:background="@drawable/round_line_bg"
+                                android:layout_marginTop="4dp"
+                                android:backgroundTint="@color/colorPrimary"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btnLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/btn_bg"
+                    android:textSize="14sp"
+                    android:text="Logout"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/yellow"
+                    android:layout_marginBottom="8dp"
+                    android:layout_below="@+id/rlProfileView"
+                    android:layout_marginHorizontal="32dp"/>
+
+                <Button
+                    android:id="@+id/btnDeleteAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/btn_bg"
+                    android:textSize="14sp"
+                    android:text="Delete Account"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/red"
+                    android:layout_marginBottom="8dp"
+                    android:layout_below="@+id/btnLogout"
+                    android:layout_marginHorizontal="32dp"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="You are not Logged in user.\nPlease Login"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/tvLogin"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="Login"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:background="@drawable/white_btn"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="8dp"
+                    />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:scrollbars="none">
+
+        <include layout="@layout/menu_layout"/>
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

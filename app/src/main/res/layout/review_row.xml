@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+             <RelativeLayout
+                   android:id="@+id/rl1"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="16dp">
+
+                   <de.hdodenhof.circleimageview.CircleImageView
+                       android:id="@+id/iv_profile"
+                       android:layout_width="40dp"
+                       android:layout_height="40dp"
+                       android:layout_marginLeft="8dp"
+                       android:src="@drawable/no_user_img"
+                       app:civ_border_color="@color/colorPrimaryDark"
+                       app:civ_border_width="2dp" />
+
+                   <TextView
+                       android:id="@+id/tv_name2"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="8dp"
+                       android:layout_marginTop="2dp"
+                       android:layout_toRightOf="@+id/iv_profile"
+                       android:text="Vicky Singh"
+                       android:textSize="14sp"
+                       android:textStyle="bold" />
+
+                   <TextView
+                       android:id="@+id/tv_create_date"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_below="@+id/tv_name2"
+                       android:layout_marginLeft="8dp"
+                       android:layout_toRightOf="@+id/iv_profile"
+                       android:text="26 Mar, 2020"
+                       android:textSize="11sp" />
+
+                   <TextView
+                       android:id="@+id/tv_comment"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_below="@+id/tv_create_date"
+                       android:layout_marginLeft="8dp"
+                       android:layout_toRightOf="@+id/iv_profile"
+                       android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                       android:textSize="13sp"
+                       android:layout_marginTop="6dp"/>
+
+                 <TextView
+                     android:id="@+id/tv_rate"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:textSize="12sp"
+                     android:text="2.5"
+                     android:layout_alignParentEnd="true"
+                     android:layout_marginRight="32dp"
+                     android:layout_marginTop="10dp"
+                     />
+
+                 <ImageView
+                     android:layout_width="16dp"
+                     android:layout_height="16dp"
+                     android:src="@drawable/ic_star"
+                     android:layout_toLeftOf="@+id/tv_rate"
+                     android:layout_marginRight="6dp"
+                     android:layout_marginTop="10dp"
+                     app:tint="@color/colorPrimaryDark"/>
+
+             </RelativeLayout>
+</LinearLayout>

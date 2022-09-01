@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/vi_book"
+                    android:layout_width="70dp"
+                    android:layout_height="94dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/book1"
+                    android:padding="3dp"
+                    android:layout_centerVertical="true"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@+id/vi_book"
+                    android:layout_marginLeft="8dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/ivDeleteBook"
+                    android:layout_marginRight="2dp">
+
+                    <TextView
+                        android:id="@+id/tv_book"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Book Name"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_author"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Author Name"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="\u20B9 150"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tv_cart_for"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:text="Rent Days"
+                            android:textStyle="normal"
+                            android:inputType="textCapWords"
+                            android:layout_gravity="center_vertical"
+                            />
+                        <LinearLayout
+                            android:id="@+id/layoutCount"
+                            android:layout_width="120dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/et_otp_bg"
+                            android:weightSum="2"
+                            android:layout_below="@+id/tv_price"
+                            android:layout_toRightOf="@+id/tv_qnt"
+                            android:layout_marginLeft="10dp">
+
+                            <ImageView
+                                android:id="@+id/tv_decrese_qty"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".5"
+                                android:src="@drawable/ic_minus"
+                                android:padding="5dp"
+                                app:tint="@color/colorPrimary"
+                                android:clickable="true"
+                                android:background="?attr/selectableItemBackground"
+                                />
+
+                            <View
+                                android:layout_width="0.8dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/colorPrimary"/>
+
+                            <TextView
+                                android:id="@+id/tv_qty"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:text="15"
+                                android:textSize="14sp"
+                                android:layout_weight="1"
+                                android:textColor="@color/black"
+                                android:gravity="center"
+                                />
+
+                            <View
+                                android:layout_width="0.8dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/colorPrimary"/>
+
+                            <ImageView
+                                android:id="@+id/iv_increse_qty"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".5"
+                                android:src="@drawable/ic_add"
+                                android:padding="5dp"
+                                app:tint="@color/colorPrimary"
+                                android:clickable="true"
+                                android:background="?attr/selectableItemBackground"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivDeleteBook"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_close"
+            android:padding="6dp"
+            app:tint="@color/red"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="6dp"
+            />
+
+            </RelativeLayout>
+
+</RelativeLayout>

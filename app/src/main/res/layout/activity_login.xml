@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".activity.LoginActivity"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <ImageView
+            android:layout_width="180dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/greenree_logo" />
+
+        <com.lib.liblibgo.views.MyEditText
+            android:id="@+id/loginPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_rectangle"
+            android:hint="Enter Email"
+            android:inputType="textWebEmailAddress"
+            android:minHeight="45dp"
+            android:paddingLeft="15dp"
+            android:textSize="14sp"
+            android:imeOptions="actionNext"
+            />
+        <com.lib.liblibgo.views.MyEditText
+            android:id="@+id/loginPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_rectangle"
+            android:hint="Password"
+            android:minHeight="45dp"
+            android:inputType="textPassword"
+            android:textSize="14sp"
+            android:paddingLeft="15dp"
+            android:imeOptions="actionDone"/>
+        <FrameLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.lib.liblibgo.views.MyCheckBox
+                android:id="@+id/rememberCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remember "
+                />
+            <com.lib.liblibgo.views.MyTextView
+                android:id="@+id/tvForgot"
+                android:background="?attr/selectableItemBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot Your Password?"
+                android:layout_gravity="end|center_vertical"
+                android:textColor="#5A4FE1"
+                android:padding="5dp"
+                />
+        </FrameLayout>
+
+        <com.lib.liblibgo.views.MyButton
+            android:id="@+id/loginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#3A9B3E"
+            android:minHeight="50dp"
+            android:text="LOGIN"
+            android:textColor="@color/white" />
+
+        <com.lib.liblibgo.views.MyTextView
+            android:id="@+id/tvRegister"
+            android:background="?attr/selectableItemBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New user register here"
+            android:layout_gravity="end|center_vertical"
+            android:textColor="@color/black"
+            android:padding="5dp"
+            android:layout_marginBottom="25dp"
+            />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

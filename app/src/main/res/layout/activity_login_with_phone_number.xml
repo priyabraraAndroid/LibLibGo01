@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LoginWithPhoneNumber"
+    android:fitsSystemWindows="false">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="@color/colorPrimaryDark"
+        />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:text="Welcome to Login"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="60dp"
+        android:letterSpacing="0.05"/>
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_below="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:text="Enter Your Mobile Number To Login."
+        android:textColor="@color/white"
+        android:textStyle="normal"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="6dp"
+        android:letterSpacing="0.05"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/tv2"
+        android:layout_marginRight="30dp"
+        app:cardCornerRadius="8dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="4dp"
+                android:layout_gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/greenree_logo"
+                    android:scaleType="centerCrop"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="@drawable/round_line_bg"
+                android:layout_marginTop="16dp"
+                >
+                <ImageView
+                    android:id="@+id/iv_email"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/flag"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:layout_marginLeft="10dp"/>
+
+
+                <TextView
+                    android:id="@+id/tv_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="+91"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/iv_email"
+                    android:layout_marginLeft="8dp"/>
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="0.8dp"
+                    android:layout_height="32dp"
+                    android:background="@color/black"
+                    android:layout_toRightOf="@+id/tv_code"
+                    android:layout_marginLeft="8dp"
+                    android:layout_centerVertical="true"
+                    />
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/view1"
+                    android:layout_marginLeft="8dp"
+                    android:background="@null"
+                    android:hint="Phone Number"
+                    android:textSize="14sp"
+                    android:maxLines="1"
+                    android:inputType="phone"
+                    android:paddingLeft="8dp"
+                    android:maxLength="10"
+                    android:letterSpacing="0.1"
+                    />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_send_otp"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="16dp"
+                android:text="SEND OTP"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                android:letterSpacing="0.1"
+                android:background="@drawable/btn_bg"
+                android:textColor="@color/white"
+                android:clickable="true"
+                android:onClick="onUserLogin"
+                android:foreground="?attr/selectableItemBackground"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="2dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginLeft="32dp"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0.8dp"
+                        android:background="@color/black"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Or"
+                        android:textSize="16sp"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginLeft="24dp"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0.8dp"
+                        android:background="@color/black"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/round_line_bg"
+                    android:visibility="gone">
+
+
+                    <ImageView
+                        android:id="@+id/iv_emaill"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_email"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitXY"
+                        android:padding="1dp"
+                        android:layout_marginLeft="10dp"
+                        app:tint="@color/colorPrimaryDark"/>
+
+                    <View
+                        android:id="@+id/view4"
+                        android:layout_width="0.8dp"
+                        android:layout_height="32dp"
+                        android:background="@color/black"
+                        android:layout_toRightOf="@+id/iv_emaill"
+                        android:layout_marginLeft="12dp"
+                        android:layout_centerVertical="true"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_email"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:background="@null"
+                        android:text="Login with Email"
+                        android:textSize="14sp"
+                        android:maxLines="1"
+                        android:inputType="phone"
+                        android:paddingLeft="8dp"
+                        android:letterSpacing=".1"
+                        />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_facebook"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/round_line_bg"
+                    android:visibility="gone">
+
+
+                    <ImageView
+                        android:id="@+id/iv_facebook"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/facebook_ic"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginLeft="10dp"/>
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="0.8dp"
+                        android:layout_height="32dp"
+                        android:background="@color/black"
+                        android:layout_toRightOf="@+id/iv_facebook"
+                        android:layout_marginLeft="12dp"
+                        android:layout_centerVertical="true"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_facebook"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:background="@null"
+                        android:text="Continue with Facebook"
+                        android:textSize="14sp"
+                        android:maxLines="1"
+                        android:inputType="phone"
+                        android:paddingLeft="8dp"
+                        android:letterSpacing=".1"
+                        />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_google"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/round_line_bg">
+
+
+                    <ImageView
+                        android:id="@+id/iv_google"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/google_ic"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginLeft="10dp"/>
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="0.8dp"
+                        android:layout_height="32dp"
+                        android:background="@color/black"
+                        android:layout_toRightOf="@+id/iv_google"
+                        android:layout_marginLeft="12dp"
+                        android:layout_centerVertical="true"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_google"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:background="@null"
+                        android:text="Continue with Google"
+                        android:textSize="14sp"
+                        android:maxLines="1"
+                        android:inputType="phone"
+                        android:paddingLeft="8dp"
+                        android:padding="2dp"
+                        android:letterSpacing=".1"
+                        />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

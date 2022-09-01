@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_height="?attr/actionBarSize">
+
+    <ImageView
+        android:id="@+id/backTool"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="15dp"
+        android:visibility="gone"
+        android:src="@drawable/ic_back"
+        android:layout_centerVertical="true"/>
+
+    <com.lib.liblibgo.views.MyTextView
+        android:id="@+id/titleTool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Bulk Book Upload"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:layout_toRightOf="@+id/backTool"
+        android:layout_toLeftOf="@+id/tvUpload"
+        android:layout_marginRight="12dp"
+        android:singleLine="true"
+        android:layout_marginLeft="16dp"
+        android:ellipsize="marquee"
+        android:layout_centerVertical="true"/>
+
+    <com.lib.liblibgo.views.MyTextView
+        android:id="@+id/tvUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/colorPrimary"
+        android:text="Back to single upload"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/white_btn"
+        android:layout_marginRight="12dp"
+        />
+
+</RelativeLayout>

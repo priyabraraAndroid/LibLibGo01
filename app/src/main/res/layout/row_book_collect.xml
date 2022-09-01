@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="4dp"
+    android:background="@drawable/bg_border_apatment"
+    android:id="@+id/card">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_border_apatment"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:id="@+id/ll"
+            android:layout_toLeftOf="@+id/iv_flag">
+
+            <com.lib.liblibgo.views.MyTextView
+                android:id="@+id/tvBookNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <com.lib.liblibgo.views.MyTextView
+                android:id="@+id/tvBookName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textSize="16sp"/>
+
+            <com.lib.liblibgo.views.MyTextView
+                android:id="@+id/tvAuthorName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textSize="16sp"/>
+
+            <com.lib.liblibgo.views.MyTextView
+                android:id="@+id/tvPubDate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textSize="16sp"/>
+
+            <com.lib.liblibgo.views.MyTextView
+                android:id="@+id/tvIsbnNo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textSize="16sp"/>
+
+            <com.lib.liblibgo.views.MyTextView
+                android:id="@+id/tvApartmentName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_flag"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:tint="@color/green"
+            android:src="@drawable/ic__flag"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="8dp"/>
+
+        <com.lib.liblibgo.views.MyButton
+            android:id="@+id/collectBook"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:text="Issue"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/white"
+            android:background="#3A9B3E"
+            android:layout_below="@+id/ll"/>
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

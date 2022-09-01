@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ContactUsActivity">
+
+    <include layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="@drawable/bg_search"
+            android:layout_marginTop="4dp"
+            android:paddingLeft="12dp"
+            android:hint="Enter your email"
+            android:textSize="13sp"
+            android:inputType="textWebEmailAddress"
+            android:maxLines="1"
+            android:paddingRight="12dp"
+            android:imeOptions="actionNext"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/etTitle"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="@drawable/bg_search"
+            android:layout_marginTop="4dp"
+            android:paddingLeft="12dp"
+            android:hint="Enter title"
+            android:textSize="13sp"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingRight="12dp"
+            android:imeOptions="actionNext"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Message"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/etmsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_search"
+            android:layout_marginTop="4dp"
+            android:paddingLeft="12dp"
+            android:hint="Enter message"
+            android:textSize="13sp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingRight="12dp"
+            android:imeOptions="actionDone"
+            />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="44dp"
+            android:text="Send"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:letterSpacing="0.1"
+            android:background="@drawable/btn_bg"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:onClick="onSubmit"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_marginBottom="8dp"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

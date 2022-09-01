@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">LibLibGo</string>
+    <string name="info_apartment_management">Apartment Management</string>
+    <string name="info_create_apartment">Create Apartment</string>
+    <string name="info_book_history">Book History</string>
+    <string name="info_customer_management">Manage Customer</string>
+    <string name="info_book_management">My Books</string>
+    <string name="info_book_entry">Book Entry</string>
+    <string name="info_customer_history">Customer History</string>
+    <string name="info_book_return">Return Book</string>
+    <string name="info_return_history">Return History</string>
+    <string name="info_book_collect">Books</string>
+    <string name="search_books">Search Books</string>
+    <string name="search_library">Search Library</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="about_us">About Us</string>
+    <string name="terms_and_conditions">Terms &amp; Conditions</string>
+    <string name="info_book_search">Search book by book number</string>
+    <string name="info_notification">Notification</string>
+    <string name="info_notification_send">Send Notification</string>
+    <string name="info_dashboard">Order History</string>
+    <string name="aprtment_dashboard">Library Dashboard</string>
+    <string name="info_customer_book_history">Customer Book History</string>
+    <string name="upload_book">Upload Book</string>
+
+    <string name="facebook_app_id">592177315445263</string>
+    <string name="fb_login_protocol_scheme">fb592177315445263</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="my_cart">My Cart</string>
+    <string name="my_address">Add New Address</string>
+    <string name="checkout">Checkout</string>
+    <string name="order_details">Order Details</string>
+    <string name="libraries">All Communities</string>
+    <string name="my_books_track">Track My Books</string>
+    <string name="categories">Books</string>
+    <string name="book_upload">Books Upload</string>
+    <string name="create_library">Create Your Own Library</string>
+    <string name="my_wishlist">My Wishlisted Books</string>
+    <string name="my_gift">My Gift Cards</string>
+    <string name="settings">Manage Alerts</string>
+    <string name="my_books">My Books</string>
+    <string name="add_book">Add Books</string>
+    <string name="select_image">Select Image</string>
+    <string name="upload_bulk_books">Upload Bulk Books</string>
+    <string name="upload_stack_books">Upload Stack Of Books</string>
+    <string name="mange_community_user">Manage Community Users</string>
+
+    <!--<string name="google_api_key_new">AIzaSyB7nQgwK-XGbFkYIakgx1S2Qi881WV9KB8</string>-->
+
+    <!-- Api Key Of Book Run -> c81i42xkfyt996glwg2g -->
+
+    <!--Amazon Api Paid price-> https://isbndb.com/isbn-database-->
+
+</resources>

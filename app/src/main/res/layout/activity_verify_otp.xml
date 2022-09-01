@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.VerifyOtp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="@color/colorPrimaryDark"
+        />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:text="OTP Verification"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="50dp"
+        android:letterSpacing="0.05"/>
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv1"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="6dp"
+        android:letterSpacing="0.05"
+        android:text="Enter the SMS verification code below\nthat was sent to your mobile number "
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:textStyle="normal"
+        android:gravity="center"
+        android:layout_marginRight="32dp"
+        />
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv2"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="6dp"
+        android:letterSpacing="0.05"
+        android:textColor="@color/yellow"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginRight="32dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:layout_below="@+id/tv3"
+        app:cardCornerRadius="8dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="4dp"
+                android:layout_gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/greenree_logo"
+                    android:scaleType="centerCrop"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <com.mukesh.OtpView
+                android:id="@+id/otp_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:itemBackground="@drawable/et_otp_bg"
+                app:cursorColor="@color/colorPrimary"
+                app:itemCount="4"
+                app:itemSpacing="8dp"
+                app:lineColor="@color/colorPrimary"
+                app:state_filled="true"
+                app:viewType="none"
+                android:cursorVisible="true"
+                android:focusable="true"
+                android:enabled="true"
+                android:theme="@style/OtpTheme"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center_horizontal"
+                />
+
+            <Button
+                android:id="@+id/btn_send_otp"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="42dp"
+                android:layout_marginBottom="16dp"
+                android:text="Verify"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                android:letterSpacing="0.1"
+                android:background="@drawable/btn_bg"
+                android:textColor="@color/white"
+                android:clickable="true"
+                android:onClick="onVerify"
+                android:foreground="?attr/selectableItemBackground"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't get the OTP ?"
+                android:textSize="14sp"
+                android:textColor="@color/light_black"
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:text="Resend OTP"
+                android:textSize="15sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:onClick="onResendOtp"
+                />
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:text="Or"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Chnage Phone Number?"
+                android:textSize="15sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:onClick="onBackToLogin"
+                />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

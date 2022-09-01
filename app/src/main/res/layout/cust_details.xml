@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@color/white"
+        android:elevation="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_book_name"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:textStyle="bold"
+                android:text="Ebook"
+                android:layout_centerHorizontal="true"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:background="@color/green"
+                android:maxLines="1"
+                android:ellipsize="end"
+                />
+
+            <ImageView
+                android:id="@+id/close"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_close"
+                android:layout_alignParentEnd="true"
+                android:padding="2dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="10dp"
+                app:tint="@color/white"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="24dp"
+                android:layout_below="@+id/tv_book_name">
+
+                <TextView
+                    android:id="@+id/tv_cust_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Customer name : Vicky Singh"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_cust_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Customer Phone no :9046894517"
+                    android:layout_below="@+id/tv_cust_name"
+                    android:textSize="14sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_cust_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Customer Email : a@gmail.com"
+                    android:layout_below="@+id/tv_cust_phone"
+                    android:textSize="14sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Return : Yes"
+                    android:layout_below="@+id/tv_cust_email"
+                    android:textSize="14sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_issue_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Issue Date : 2021-04-18"
+                    android:layout_below="@+id/tv_status"
+                    android:textSize="14sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_return_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Return Date : 2021-04-18"
+                    android:layout_below="@+id/tv_issue_date"
+                    android:textSize="14sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_isbn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ISBN No : abc"
+                    android:layout_below="@+id/tv_return_date"
+                    android:textSize="14sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_apartment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Apartment Name : abc"
+                    android:layout_below="@+id/tv_isbn"
+                    android:textSize="14sp"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

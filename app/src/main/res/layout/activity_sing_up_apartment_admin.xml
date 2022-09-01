@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dashboard.apartment_admin.SingUpApartmentAdminActivity">
+
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_close"
+        android:padding="3dp"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:onClick="onBack"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="4dp"
+            android:layout_gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/greenree_logo"
+                android:scaleType="centerCrop"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:layout_marginTop="32dp"
+            android:visibility="visible"
+            android:text="You are not authorized yet for library management.\nPlease send request to admin\n&amp; wait for approval."/>
+
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/yellow"
+            android:textStyle="bold"
+            android:text="Already send request."
+            android:layout_marginTop="32dp"
+            android:layout_gravity="center_horizontal"
+            android:visibility="invisible"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"
+            android:textAlignment="center"
+            />
+
+        <Button
+            android:id="@+id/sendRequestBtn"
+            android:layout_width="200dp"
+            android:layout_height="48dp"
+            android:background="@drawable/btn_bg"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="62dp"
+            android:text="Send Request"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:onClick="onRequestSend"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

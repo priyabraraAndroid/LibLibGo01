@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginTop="4dp"
+    android:layout_marginRight="12dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/vi_lib_logo"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@drawable/auther3"
+        app:civ_border_color="#AAB6FA"
+        app:civ_border_width="1dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_library_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vicky Singh"
+        android:textSize="13sp"
+        android:textColor="@color/black"
+        android:letterSpacing="0.1"
+        android:textStyle="normal" />
+
+    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+        android:id="@+id/lib_rating"
+        android:layout_width="90dp"
+        android:layout_height="16dp"
+        style="@style/Widget.MaterialRatingBar.RatingBar"
+        app:mrb_progressTint="@color/colorPrimary"
+        app:mrb_progressTintMode="src_in"
+        app:mrb_secondaryProgressTint="@color/colorPrimary"
+        android:layout_below="@+id/tv_rate"
+        android:rating="5.0"
+        />
+
+
+</LinearLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/dialog_round_red"
+    android:backgroundTint="@color/white">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/coins"
+            app:tint="@color/colorPrimary"
+            android:padding="2dp"
+            android:layout_marginTop="8dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You have 200 Lib coins.\nEnter how many lib coins you wat to redeem."
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textStyle="normal"
+            android:textAlignment="center"
+            />
+
+        <EditText
+            android:id="@+id/et_lib_coin"
+            android:layout_width="160dp"
+            android:layout_height="48dp"
+            android:background="@drawable/et_otp_bg"
+            android:layout_marginTop="16dp"
+            android:hint="Enter Coin quantity"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:maxLines="1"
+            android:inputType="number"
+            android:imeOptions="actionDone"
+            android:textColor="@color/black"
+            android:text="0"/>
+
+        <Button
+            android:id="@+id/btn_done"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/btn_bg"
+            android:text="Redeem"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:layout_marginBottom="8dp"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

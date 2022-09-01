@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.homedashboard.fragmentshome.MyAccountFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+   <RelativeLayout
+       android:id="@+id/rl1"
+       android:layout_width="match_parent"
+       android:layout_height="?attr/actionBarSize"
+       android:background="@color/colorPrimary">
+
+
+       <com.lib.liblibgo.views.MyTextView
+           android:id="@+id/titleTool"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textSize="18sp"
+           android:layout_centerVertical="true"
+           android:textColor="@color/white"
+           android:text="My Account"
+           android:layout_marginLeft="16dp"
+           />
+
+       <de.hdodenhof.circleimageview.CircleImageView
+           android:id="@+id/iv_user"
+           android:layout_width="40dp"
+           android:layout_height="40dp"
+           android:src="@drawable/no_user_img"
+           app:civ_border_width="1dp"
+           app:civ_border_color="@color/white"
+           android:layout_centerVertical="true"
+           android:layout_alignParentEnd="true"
+           android:layout_marginRight="16dp"
+           android:visibility="gone"/>
+
+   </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlLoginUser"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:id="@+id/rlProfileView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:gravity="center"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/no_img"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/colorPrimary"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="16dp"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Guest User"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvLibCoins"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lib Coins - 0"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:background="@drawable/white_btn"
+                        android:layout_marginTop="4dp"
+                        android:backgroundTint="@color/gray"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvRedeem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Redeem"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:textStyle="normal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="19dp"
+                        android:paddingRight="19dp"
+                        android:background="@drawable/round_line_bg"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginLeft="16dp"
+                        android:backgroundTint="@color/colorPrimary"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorColor="@color/white"
+            app:tabMode="fixed"
+            app:tabGravity="center"
+            app:tabPaddingEnd="16dp"
+            app:tabPaddingStart="16dp"
+            app:tabSelectedTextColor="@color/black"
+            app:tabTextColor="@color/white"
+            app:tabBackground="@drawable/tab_color_selector"
+            android:layout_below="@+id/rlProfileView"
+            />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tab_layout" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You are not Logged in user.\nPlease Login"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="Login"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:backgroundTint="@color/colorPrimary"
+            android:background="@drawable/white_btn"
+            android:textColor="@color/white"
+            android:layout_marginTop="8dp"
+            />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
