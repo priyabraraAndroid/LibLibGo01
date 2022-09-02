@@ -231,6 +231,7 @@ public class NewHomeFragment extends Fragment {
 
         llAllBooksFilter = (LinearLayout)view.findViewById(R.id.llAllBooksFilter);
 
+        //Fetch Banner image.....
         getSliderData();
 
 
