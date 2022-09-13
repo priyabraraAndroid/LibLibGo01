@@ -1020,7 +1020,7 @@ public class NewHomeFragment extends Fragment {
         cartCount = sharedpreferences.getInt("cart_count",0);
         if (cartCount > 0){
             tvCartCount.setVisibility(View.VISIBLE);
-            ivCart.setColorFilter(getResources().getColor(R.color.colorPrimary));
+            ivCart.setColorFilter(getResources().getColor(R.color.white));
             if (cartCount < 10){
                 tvCartCount.setText(String.valueOf(cartCount));
             }else {
