@@ -85,7 +85,7 @@ public class ProfileFragment extends Fragment implements PaymentResultListener {
     private String upiStatus = "0";
     private String transactionId = "";
     private DrawerLayout drawer;
-    private MyTextView menuEditProfile,menuPrivacyPolicy,menuAboutUs,menuTermCondition,menuContactUs,menuSettings,wishList;
+    private MyTextView menuEditProfile,menuPrivacyPolicy,menuAboutUs,menuTermCondition,menuContactUs,menuSettings,wishList,menuLogout;
     private LinearLayout llSetting;
     private View viewSetting;
 
@@ -106,6 +106,7 @@ public class ProfileFragment extends Fragment implements PaymentResultListener {
         tvLogin = (TextView)view.findViewById(R.id.tvLogin);
         btnLogout = (Button)view.findViewById(R.id.btnLogout);
         btnDeleteAccount = (Button)view.findViewById(R.id.btnDeleteAccount);
+        menuLogout = view.findViewById(R.id.log_out);
 
         rlLoginUser = (RelativeLayout)view.findViewById(R.id.rlLoginUser);
         llLogin = (LinearLayout)view.findViewById(R.id.llLogin);
@@ -135,13 +136,15 @@ public class ProfileFragment extends Fragment implements PaymentResultListener {
             llSetting.setVisibility(View.GONE);
             viewSetting.setVisibility(View.GONE);
             wishList.setVisibility(View.GONE);
+            menuLogout.setText("Login");
         }else {
             rlLoginUser.setVisibility(View.VISIBLE);
             llLogin.setVisibility(View.GONE);
             menuEditProfile.setVisibility(View.VISIBLE);
             llSetting.setVisibility(View.VISIBLE);
-            viewSetting.setVisibility(View.GONE);
+            viewSetting.setVisibility(View.VISIBLE);
             wishList.setVisibility(View.VISIBLE);
+            menuLogout.setText("Logout");
             getUserDetails();
         }
 
@@ -150,6 +153,18 @@ public class ProfileFragment extends Fragment implements PaymentResultListener {
             public void onClick(View view) {
                 Intent intentHome = new Intent(mContext, LoginWithPhoneNumber.class);
                 startActivity(intentHome);
+            }
+        });
+
+        menuLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (database.getUserId().equals("")){
+                    Intent intentHome = new Intent(getContext(), LoginWithPhoneNumber.class);
+                    startActivity(intentHome);
+                }else {
+                    logoutUser();
+                }
             }
         });
 
@@ -400,6 +415,7 @@ public class ProfileFragment extends Fragment implements PaymentResultListener {
                             upiStatus = object.getString("upi_status");
 
                             tvName.setText(object.getString("username"));
+                            tvPhone.setText(object.getString("mobile"));
                             tvLibCoins.setText(Constants.myLibCoins);
                             tvAdr.setText(apartmentName+", "+
                                     object.getString("area_name")+", "
@@ -421,13 +437,15 @@ public class ProfileFragment extends Fragment implements PaymentResultListener {
                                 llSetting.setVisibility(View.GONE);
                                 viewSetting.setVisibility(View.GONE);
                                 wishList.setVisibility(View.GONE);
+                                menuLogout.setText("Login");
                             }else {
                                 rlLoginUser.setVisibility(View.VISIBLE);
                                 llLogin.setVisibility(View.GONE);
                                 menuEditProfile.setVisibility(View.VISIBLE);
                                 llSetting.setVisibility(View.VISIBLE);
-                                viewSetting.setVisibility(View.GONE);
+                                viewSetting.setVisibility(View.VISIBLE);
                                 wishList.setVisibility(View.VISIBLE);
+                                menuLogout.setText("Logout");
                             }
 
                             tvRedeem.setOnClickListener(new View.OnClickListener() {
@@ -435,12 +453,14 @@ public class ProfileFragment extends Fragment implements PaymentResultListener {
                                 public void onClick(View view) {
                                     if (Constants.myLibCoins.equals("0")){
                                         Toast.makeText(mContext, "You don't have libcoin.", Toast.LENGTH_SHORT).show();
+                                        tvRedeem.setBackgroundResource(R.drawable.btn_bg_grey);
+                                        //tvRedeem.setEnabled(false);
                                     }else {
+                                        tvRedeem.setBackgroundResource(R.drawable.btn_bg);
                                         showRedeemPopup(R.layout.redeem_lib_coin_popup);
                                     }
                                 }
                             });
-
 
                         }else {
                             progressBar.dismiss();
