@@ -101,12 +101,14 @@
                     android:gravity="center_vertical"
                     android:padding="5dp"
                     android:text="Edit Profile"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:visibility="gone"/>
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/grey_light_secondary" />
+                    android:background="@color/grey_light_secondary"
+                    android:visibility="gone"/>
 
                 <com.lib.liblibgo.views.MyTextView
                     android:id="@+id/wishList"
@@ -121,7 +123,8 @@
                     android:text="Wishlisted Books"
                     android:paddingLeft="8dp"
                     android:textSize="18sp"
-                    android:drawableTint="@color/colorPrimary"/>
+                    android:drawableTint="@color/colorPrimary"
+                    android:visibility="gone"/>
 
                 <View
                     android:layout_width="match_parent"
@@ -280,12 +283,14 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/grey_light_secondary" />
+                    android:background="@color/grey_light_secondary"
+                    android:visibility="gone"/>
 
                 <LinearLayout
                     android:id="@+id/llSetting"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
 
                     <ImageView
                         android:layout_width="26dp"
@@ -332,7 +337,7 @@
                     android:drawableTint="@color/colorPrimary"
                     android:textSize="18sp"
                     android:layout_marginBottom="70dp"
-                    android:visibility="gone"/>
+                    android:visibility="visible"/>
 
 
             </LinearLayout>

@@ -19,15 +19,32 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <CheckBox
-                android:id="@+id/cbGiveaway"
+            <ImageView
+                android:id="@+id/iv_image"
+                android:layout_width="100dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_search"
+                android:padding="2dp"
+                android:src="@drawable/no_img"
+                android:scaleType="fitXY"
+                android:visibility="visible"
+                android:layout_marginTop="16dp"/>
+
+            <com.lib.liblibgo.views.MyTextView
+                android:id="@+id/tvUploadImage"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Make This Stack As Giveaway."
+                android:layout_height="40dp"
+                android:text="Click Picture"
+                android:textStyle="bold"
                 android:textSize="13sp"
-                android:buttonTint="@color/colorPrimary"
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="8dp"/>
+                android:layout_gravity="center"
+                android:paddingRight="22dp"
+                android:paddingLeft="22dp"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_search"
+                />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -156,6 +173,16 @@
                 </LinearLayout>
 
             </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/cbGiveaway"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Make This Stack As Giveaway."
+                android:textSize="13sp"
+                android:buttonTint="@color/colorPrimary"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="16dp"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -505,33 +532,6 @@
                 android:paddingHorizontal="12dp"
                 android:textSize="14sp"
                 android:text="1"/>
-
-            <ImageView
-                android:id="@+id/iv_image"
-                android:layout_width="100dp"
-                android:layout_height="110dp"
-                android:layout_gravity="center"
-                android:background="@drawable/bg_search"
-                android:padding="2dp"
-                android:src="@drawable/no_img"
-                android:scaleType="fitXY"
-                android:visibility="visible"
-                android:layout_marginTop="16dp"/>
-
-            <com.lib.liblibgo.views.MyTextView
-                android:id="@+id/tvUploadImage"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:text="Click Picture"
-                android:textStyle="bold"
-                android:textSize="13sp"
-                android:layout_gravity="center"
-                android:paddingRight="22dp"
-                android:paddingLeft="22dp"
-                android:gravity="center"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/bg_search"
-                />
 
             <com.lib.liblibgo.views.MyButton
                 android:id="@+id/sendBtn"

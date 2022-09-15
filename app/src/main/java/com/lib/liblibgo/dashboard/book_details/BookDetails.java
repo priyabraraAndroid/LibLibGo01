@@ -380,13 +380,13 @@ public class BookDetails extends AppCompatActivity {
                         }else {
                             mAuthorNameTv.setVisibility(View.VISIBLE);
                             rlMrp.setVisibility(View.VISIBLE);
-                            mAuthorNameTv.setText("By "+response.body().getResponse().getBook_list().getAuthor_name());
+                            mAuthorNameTv.setText("- "+response.body().getResponse().getBook_list().getAuthor_name());
                         }
 
                         mDescriptionTv.setText(response.body().getResponse().getBook_list().getDescription());
 
                         if (response.body().getResponse().getBook_list().getLibraries_name().equals("")){
-                            tv_community.setText("Open");
+                            tv_community.setText("");
                         }else {
                             tv_community.setText(response.body().getResponse().getBook_list().getLibraries_name());
                         }

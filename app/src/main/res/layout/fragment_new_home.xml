@@ -12,7 +12,16 @@
         android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
         >
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/app_logo_new"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -21,13 +30,15 @@
             android:background="@drawable/txt_bg_gray"
             android:paddingVertical="4dp"
             android:paddingHorizontal="12dp"
-            android:layout_marginLeft="14dp">
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/ivLogo"
+            android:backgroundTint="@color/colorPrimary">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Lib"
-                android:textColor="@color/black_fade"
+                android:textColor="@color/red"
                 android:layout_gravity="center_vertical"
                 android:textSize="20sp"
                 android:letterSpacing="0.1"
@@ -37,7 +48,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Lib"
-                android:textColor="@color/black_fade"
+                android:textColor="@color/yellow"
                 android:layout_gravity="center_vertical"
                 android:textSize="20sp"
                 android:letterSpacing="0.1"
@@ -47,7 +58,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Go"
-                android:textColor="@color/black_fade"
+                android:textColor="#3CAC41"
                 android:layout_gravity="center_vertical"
                 android:textSize="20sp"
                 android:letterSpacing="0.1"
@@ -67,7 +78,7 @@
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:src="@drawable/ic_baseline_notifications_none_24"
-                app:tint="@color/black_fade"
+                app:tint="@color/white"
                 android:clickable="true"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 />
@@ -97,11 +108,12 @@
 
             <ImageView
                 android:id="@+id/ivCart"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:src="@drawable/cart_bag"
-                android:padding="4dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_cart_icon"
+                android:padding="2dp"
                 android:clickable="true"
+                app:tint="@color/white"
                 android:background="?attr/selectableItemBackgroundBorderless"/>
 
             <TextView
@@ -112,9 +124,10 @@
                 android:layout_marginLeft="16dp"
                 android:text="9+"
                 android:textSize="10sp"
-                android:textColor="@color/white"
+                android:textColor="@color/colorPrimary"
                 android:gravity="center"
                 android:visibility="invisible"
+                android:backgroundTint="@color/white"
                 />
 
         </FrameLayout>
@@ -131,13 +144,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            >
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="10dp"
-                android:layout_marginTop="4dp">
+                android:layout_marginTop="8dp">
 
                 <ImageView
                     android:id="@+id/ivPin"
@@ -253,6 +267,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
+                android:visibility="gone"
                 >
 
                 <com.smarteist.autoimageslider.SliderView
@@ -414,7 +429,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
-                android:layout_marginVertical="20dp"
+                android:layout_marginVertical="22dp"
                 android:paddingHorizontal="12dp"
                 android:background="@color/colorPrimary">
 
@@ -432,9 +447,7 @@
                     android:id="@+id/llAllBooksFilter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/tv"
-                    android:layout_marginLeft="32dp"
-                    android:background="@drawable/filter_bg"
+                    android:layout_alignParentEnd="true"
                     android:paddingHorizontal="12dp"
                     android:paddingVertical="8dp"
                     android:layout_centerVertical="true">
@@ -442,85 +455,86 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="View All"
                         android:textSize="14sp"
-                        android:textColor="@color/black_fade"
-                        android:textStyle="bold"
+                        android:text="View all"
+                        android:textColor="@color/white"
+                        android:textStyle="normal"
+                        android:layout_gravity="end"
+                        android:layout_alignParentEnd="true"
                         />
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_marginLeft="4dp"
-                        app:tint="@color/black_fade"
-                        android:visibility="gone"
-                        android:src="@drawable/ic_baseline_filter_alt_24"/>
-
 
                 </LinearLayout>
 
             </RelativeLayout>
 
-            <RelativeLayout
+            <LinearLayout
+                android:id="@+id/llCommunityText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                >
+                android:orientation="vertical"
+                android:layout_marginBottom="22dp"
+                android:visibility="gone">
 
-            <TextView
-                android:id="@+id/tvCommunityTxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="From your community &amp; nearby"
-                android:textColor="@color/black_fade"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_marginLeft="8dp"
-                android:layout_centerVertical="true"
-               />
-
-                <TextView
-                    android:id="@+id/tvCommunitySeeAll"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="View more"
-                    android:textSize="14sp"
-                    android:textColor="@color/colorPrimary"
-                    android:textStyle="normal"
-                    android:layout_gravity="end"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="12dp"
-                    android:layout_alignParentEnd="true"/>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="4dp">
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rvNearMeBooks"
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    tools:itemCount="8"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    android:orientation="horizontal"
-                    tools:listitem="@layout/book_list_row"/>
+                    >
 
-                <ProgressBar
-                    android:id="@+id/progNearMe"
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:id="@+id/tvCommunityTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="From your community &amp; nearby"
+                        android:textColor="@color/black_fade"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="8dp"
+                        android:layout_centerVertical="true"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvCommunitySeeAll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View more"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="normal"
+                        android:layout_gravity="end"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="12dp"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:visibility="gone"/>
+                    android:layout_marginHorizontal="4dp">
 
-            </RelativeLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvNearMeBooks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        tools:itemCount="8"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:orientation="horizontal"
+                        tools:listitem="@layout/book_list_row"/>
+
+                    <ProgressBar
+                        android:id="@+id/progNearMe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="22dp"
                 >
 
                 <TextView
@@ -818,7 +832,7 @@
                 android:id="@+id/rlSellBackView"
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
-                android:layout_marginBottom="16dp">
+                >
 
                 <ImageView
                     android:id="@+id/ivSaleBackBanner"
@@ -851,7 +865,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="4dp"
-                android:layout_marginBottom="16dp"
                 android:visibility="gone">
 
                 <androidx.recyclerview.widget.RecyclerView
@@ -868,6 +881,173 @@
                     android:visibility="gone"/>
 
             </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User Stories"
+                    android:textColor="@color/black_fade"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="8dp"
+                    />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fillViewport="true"
+                    android:scrollbars="none"
+                    android:layout_marginTop="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="6dp"
+                        android:layout_marginTop="4dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="280dp"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="4dp"
+                            android:layout_margin="4dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:background="@color/white">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/ivImgUser"
+                                    android:layout_width="46dp"
+                                    android:layout_height="46dp"
+                                    android:src="@drawable/img_user"
+                                    app:civ_border_width="1dp"
+                                    app:civ_border_color="@color/gray"
+                                    />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_toRightOf="@+id/ivImgUser"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginHorizontal="8dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Vicky Singh"
+                                        android:textSize="14sp"
+                                        android:textColor="@color/black_fade"
+                                        android:textStyle="bold"
+                                        />
+
+                                    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                                        android:id="@+id/lib_rating"
+                                        android:layout_width="90dp"
+                                        android:layout_height="16dp"
+                                        style="@style/Widget.MaterialRatingBar.RatingBar"
+                                        app:mrb_progressTint="@color/colorPrimary"
+                                        app:mrb_progressTintMode="src_in"
+                                        app:mrb_secondaryProgressTint="@color/colorPrimary"
+                                        android:layout_below="@+id/tv_rate"
+                                        android:rating="5.0"
+                                        android:visibility="visible"
+                                        />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="No complaints, sold my books very easily here.Definitely worth atry."
+                                        android:textSize="11sp"
+                                        android:layout_marginTop="4dp"
+                                        />
+
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="280dp"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="4dp"
+                            android:layout_margin="4dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:background="@color/white">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/ivImgUser2"
+                                    android:layout_width="46dp"
+                                    android:layout_height="46dp"
+                                    android:src="@drawable/img_user_2"
+                                    app:civ_border_width="1dp"
+                                    app:civ_border_color="@color/gray"
+                                    />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_toRightOf="@+id/ivImgUser2"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginHorizontal="8dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Naresh Dhamija"
+                                        android:textSize="14sp"
+                                        android:textColor="@color/black_fade"
+                                        android:textStyle="bold"
+                                        />
+
+                                    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                                        android:layout_width="90dp"
+                                        android:layout_height="16dp"
+                                        style="@style/Widget.MaterialRatingBar.RatingBar"
+                                        app:mrb_progressTint="@color/colorPrimary"
+                                        app:mrb_progressTintMode="src_in"
+                                        app:mrb_secondaryProgressTint="@color/colorPrimary"
+                                        android:layout_below="@+id/tv_rate"
+                                        android:rating="4.5"
+                                        android:visibility="visible"
+                                        />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="This app is amazing ! Ordered from LibLibGo for the dirst time in jan,2022."
+                                        android:textSize="11sp"
+                                        android:layout_marginTop="4dp"
+                                        />
+
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+            </LinearLayout>
 
         </LinearLayout>
 

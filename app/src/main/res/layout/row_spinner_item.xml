@@ -19,6 +19,7 @@
         android:letterSpacing="0.1"
         android:singleLine="true"
         android:ellipsize="end"
+        android:textColor="@color/black_fade"
         />
 
     <View

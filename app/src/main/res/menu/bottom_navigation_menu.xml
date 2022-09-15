@@ -10,8 +10,13 @@
     <item
         android:id="@+id/item2"
         android:enabled="true"
-        android:icon="@drawable/ic_user"
+        android:icon="@drawable/ic_person"
         android:title="My Account"/>
+
+    <item
+        android:id="@+id/item6"
+        android:enabled="true"
+        android:title=""/>
 
     <item
         android:id="@+id/item3"

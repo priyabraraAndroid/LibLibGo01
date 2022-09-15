@@ -46,9 +46,9 @@ public class OpenBookAdapter extends RecyclerView.Adapter<OpenBookAdapter.Catego
     }
 
     public class CategoryHolder extends RecyclerView.ViewHolder {
-        TextView tvBookName,tvBookAuthor,tvBookPrice,tvmetter,tvBookRentPrice,tvCommunity;
+        TextView tvBookName,tvBookAuthor,tvBookPrice,tvmetter,tvBookRentPrice,tvCommunity,tvPriceDiv;
         ImageView ivBook;
-        LinearLayout llRent,llBuy;
+        LinearLayout llRent,llBuy,llLocation;
 
         public CategoryHolder(@NonNull View itemView) {
             super(itemView);
@@ -59,45 +59,49 @@ public class OpenBookAdapter extends RecyclerView.Adapter<OpenBookAdapter.Catego
             tvmetter = itemView.findViewById(R.id.tvmetter);
             ivBook = itemView.findViewById(R.id.ivBook);
             llRent = itemView.findViewById(R.id.llRent);
-            llBuy = itemView.findViewById(R.id.llBuy);
+            //llBuy = itemView.findViewById(R.id.llBuy);
             tvCommunity = itemView.findViewById(R.id.tvCommunity);
+            tvPriceDiv = itemView.findViewById(R.id.tvPriceDiv);
+            llLocation = itemView.findViewById(R.id.llLocation);
         }
 
         public void bind() {
             tvBookName.setText(mList.get(getAdapterPosition()).getBook_name());
-            tvBookAuthor.setText("By "+mList.get(getAdapterPosition()).getAuthor_name());
+            tvBookAuthor.setText("- "+mList.get(getAdapterPosition()).getAuthor_name());
 
             if (mList.get(getAdapterPosition()).getSelling_type().equals("For Rent")){
                 if (mList.get(getAdapterPosition()).getRental_price().equals("0")){
                     tvBookRentPrice.setText("Free");
                 }else {
-                    tvBookRentPrice.setText("\u20B9 "+mList.get(getAdapterPosition()).getRental_price());
+                    tvBookRentPrice.setText("\u20B9"+mList.get(getAdapterPosition()).getRental_price()+"/day");
                 }
 
-                tvBookPrice.setText("N/A");
-                /*llRent.setVisibility(View.VISIBLE);
-                llBuy.setVisibility(View.INVISIBLE);*/
+                tvPriceDiv.setVisibility(View.GONE);
+                tvBookPrice.setText("");
+                //tvBookPrice.setText("N/A");;
+
             }else if (mList.get(getAdapterPosition()).getSelling_type().equals("For Sale")){
                 if (mList.get(getAdapterPosition()).getSale_price().equals("0")){
                     tvBookPrice.setText("Free");
                 }else {
-                    tvBookPrice.setText("\u20B9 "+mList.get(getAdapterPosition()).getSale_price());
+                    tvBookPrice.setText("\u20B9"+mList.get(getAdapterPosition()).getSale_price());
                 }
 
-                tvBookRentPrice.setText("N/A");
-                /*llRent.setVisibility(View.INVISIBLE);
-                llBuy.setVisibility(View.VISIBLE);*/
+                //tvBookRentPrice.setText("N/A");
+                tvPriceDiv.setVisibility(View.GONE);
+                tvBookRentPrice.setText("");
             }else {
+                tvPriceDiv.setVisibility(View.VISIBLE);
                 if (mList.get(getAdapterPosition()).getRental_price().equals("0")){
                     tvBookRentPrice.setText("Free");
                 }else {
-                    tvBookRentPrice.setText("\u20B9 "+mList.get(getAdapterPosition()).getRental_price());
+                    tvBookRentPrice.setText("\u20B9"+mList.get(getAdapterPosition()).getRental_price()+"/day");
                 }
 
                 if (mList.get(getAdapterPosition()).getSale_price().equals("0")){
                     tvBookPrice.setText("Free");
                 }else {
-                    tvBookPrice.setText("\u20B9 "+mList.get(getAdapterPosition()).getSale_price());
+                    tvBookPrice.setText("\u20B9"+mList.get(getAdapterPosition()).getSale_price());
                 }
             }
 
@@ -108,13 +112,16 @@ public class OpenBookAdapter extends RecyclerView.Adapter<OpenBookAdapter.Catego
             }
 
             tvmetter.setText("1.9km");
-            tvmetter.setVisibility(View.VISIBLE);
+            //tvmetter.setVisibility(View.VISIBLE);
 
             if (mList.get(getAdapterPosition()).getLibrary_name() != null){
                 if (mList.get(getAdapterPosition()).getLibrary_name().equals("")){
-                    tvCommunity.setText("Open");
+                    tvCommunity.setVisibility(View.INVISIBLE);
+                    llLocation.setVisibility(View.VISIBLE);
                 }else {
                     tvCommunity.setText(mList.get(getAdapterPosition()).getLibrary_name());
+                    llLocation.setVisibility(View.INVISIBLE);
+                    tvCommunity.setVisibility(View.VISIBLE);
                 }
             }
 

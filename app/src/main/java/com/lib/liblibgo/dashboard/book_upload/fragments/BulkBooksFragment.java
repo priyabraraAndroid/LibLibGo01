@@ -108,6 +108,10 @@ public class BulkBooksFragment extends Fragment {
         btnDownload = (Button)view.findViewById(R.id.btnDownload);
         uploadCsvFileBtn = (Button)view.findViewById(R.id.uploadCsvFileBtn);
 
+        /*Constants.selectedStackCommunityIds = "";
+        database = new UserDatabase(mContext);*/
+        checkCommunity();
+
         cbOpen.setChecked(true);
         cbOpen.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorPrimary)));
 
@@ -249,10 +253,9 @@ public class BulkBooksFragment extends Fragment {
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
-        if (isVisibleToUser){
-            Constants.selectedStackCommunityIds = "";
-            checkCommunity();
-        }
+        /*if (isVisibleToUser){
+
+        }*/
     }
 
     private void checkCommunity() {

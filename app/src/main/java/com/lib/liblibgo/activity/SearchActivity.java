@@ -319,9 +319,6 @@ public class SearchActivity extends AppCompatActivity {
 
                                 //tvBookName.setText(name);
                                 //tvBookAuthor.setText(author);
-
-
-
                                 /*if (thumbnail.equals("") || thumbnail.equals("null")){
                                     smallThumbnail = "";
                                     thumbnail = "";

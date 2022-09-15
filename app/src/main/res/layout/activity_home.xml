@@ -549,32 +549,50 @@
 
     </androidx.drawerlayout.widget.DrawerLayout>
 
-
-    <FrameLayout
-        android:id="@+id/content"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/bottom_navigation"
-        >
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_navigation"
+            >
 
 
-    </FrameLayout>
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:menu="@menu/bottom_navigation_menu"
+        </FrameLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/bottom_navigation_menu"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+            app:labelVisibilityMode="labeled"
+            app:itemIconSize="24dp"
+            android:fitsSystemWindows="true"
+            android:layout_gravity="bottom"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            app:itemIconTint="@drawable/tab_color"
+            app:itemTextColor="@drawable/tab_color"
+            app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+            />
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/ivAddBook"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:src="@drawable/ic_add_book_new"
+        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:background="@color/colorPrimary"
-        app:labelVisibilityMode="labeled"
-        app:itemIconSize="24dp"
-        android:fitsSystemWindows="true"
-        android:layout_gravity="bottom"
-        android:layout_marginEnd="0dp"
-        android:layout_marginStart="0dp"
-        app:itemIconTint="@drawable/tab_color"
-        app:itemTextColor="@drawable/tab_color"
-        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+        app:tint="@color/white"
+        android:layout_marginBottom="8dp"
         />
 
 </RelativeLayout>

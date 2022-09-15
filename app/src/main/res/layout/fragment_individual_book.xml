@@ -60,7 +60,7 @@
                     android:id="@+id/rbSale"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Sale"
+                    android:text="Sell"
                     android:textSize="13sp"
                     android:buttonTint="@color/black_fade"
                     />
@@ -163,7 +163,7 @@
                     android:layout_height="45dp"
                     android:layout_weight="0.13"
                     android:clickable="true"
-                    android:src="@drawable/ic_qr_scanner"
+                    android:src="@drawable/barcode"
                     android:padding="9dp"
                     app:tint="@color/black_fade"
                     android:background="?attr/selectableItemBackground"

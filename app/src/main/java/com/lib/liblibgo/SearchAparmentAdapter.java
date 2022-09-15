@@ -123,7 +123,7 @@ public class SearchAparmentAdapter extends RecyclerView.Adapter<SearchAparmentAd
             tv_book.setText(bookModels.get(getAdapterPosition()).getBook_name());
 
             if (bookModels.get(getAdapterPosition()).getIs_stack_upload().equals("0")){
-                tv_author.setText("By "+bookModels.get(getAdapterPosition()).getAuthor_name());
+                tv_author.setText("- "+bookModels.get(getAdapterPosition()).getAuthor_name());
             }else {
                 tv_author.setVisibility(View.GONE);
             }

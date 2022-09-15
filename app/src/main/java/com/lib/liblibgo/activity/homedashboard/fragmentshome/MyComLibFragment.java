@@ -587,15 +587,15 @@ public class MyComLibFragment extends Fragment {
 
                         if (response.body().getResponse().getLibrary_image().equals("")){
                             if (Constants.SelectedLibraryProfileImage.equals("")){
-                                Glide.with(getContext()).load(R.drawable.no_img).into(imageView);
-                                Glide.with(getContext()).load(R.drawable.no_img).into(vi_book);
+                                Glide.with(mContext).load(R.drawable.no_img).into(imageView);
+                                Glide.with(mContext).load(R.drawable.no_img).into(vi_book);
                             }else {
-                                Glide.with(getContext()).load(Constants.SelectedLibraryProfileImage).into(imageView);
-                                Glide.with(getContext()).load(Constants.SelectedLibraryProfileImage).into(vi_book);
+                                Glide.with(mContext).load(Constants.SelectedLibraryProfileImage).into(imageView);
+                                Glide.with(mContext).load(Constants.SelectedLibraryProfileImage).into(vi_book);
                             }
                         }else {
-                            Glide.with(getContext()).load(response.body().getResponse().getLibrary_image()).into(imageView);
-                            Glide.with(getContext()).load(response.body().getResponse().getLibrary_image()).into(vi_book);
+                            Glide.with(mContext).load(response.body().getResponse().getLibrary_image()).into(imageView);
+                            Glide.with(mContext).load(response.body().getResponse().getLibrary_image()).into(vi_book);
                         }
 
                         layoutBookManagement.setOnClickListener(new View.OnClickListener() {
@@ -703,18 +703,19 @@ public class MyComLibFragment extends Fragment {
                 llLogin.setVisibility(View.GONE);
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 ft.detach(MyComLibFragment.this).attach(MyComLibFragment.this).commit();
-                Dexter.withContext(getContext()).withPermissions(Manifest.permission.ACCESS_FINE_LOCATION,Manifest.permission.ACCESS_COARSE_LOCATION)
+               /* Dexter.withContext(getContext()).withPermissions(Manifest.permission.ACCESS_FINE_LOCATION,Manifest.permission.ACCESS_COARSE_LOCATION)
                         .withListener(new MultiplePermissionsListener() {
                             @Override
                             public void onPermissionsChecked(MultiplePermissionsReport multiplePermissionsReport) {
-                                isApartmentLibraryCreated();
+
                             }
 
                             @Override
                             public void onPermissionRationaleShouldBeShown(List<PermissionRequest> list, PermissionToken permissionToken) {
                                 permissionToken.continuePermissionRequest();
                             }
-                        }).check();
+                        }).check();*/
+                isApartmentLibraryCreated();
                 HomeFragment.flag = 0;
             }
         }

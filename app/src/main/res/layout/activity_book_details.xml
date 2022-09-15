@@ -48,6 +48,7 @@
                 android:layout_height="34dp"
                 android:src="@drawable/ic_cart_icon"
                 android:padding="4dp"
+                app:tint="@color/black_fade"
                 android:layout_marginTop="18dp"
                 android:clickable="true"
                 android:background="?attr/selectableItemBackgroundBorderless"/>
@@ -361,7 +362,7 @@
             android:id="@+id/btn_buy"
             android:layout_width="150dp"
             android:layout_height="48dp"
-            android:text="Buy Now"
+            android:text="Add to cart"
             android:textColor="@color/white"
             android:textAllCaps="false"
             android:background="@drawable/btn_bg"
@@ -420,7 +421,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
-        android:visibility="visible">
+        android:visibility="gone">
 
         <ProgressBar
             android:layout_width="wrap_content"

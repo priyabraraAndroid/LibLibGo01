@@ -10,6 +10,7 @@
     tools:openDrawer="left"
     >
 
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -50,228 +51,449 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none"
             android:layout_marginTop="?attr/actionBarSize">
 
             <RelativeLayout
-                android:id="@+id/rlLoginUser"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:visibility="gone"
                 >
 
                 <RelativeLayout
-                    android:id="@+id/rlProfileView"
+                    android:id="@+id/rlLoginUser"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:background="@color/white"
-                    android:visibility="visible">
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    >
 
-                    <LinearLayout
-                        android:id="@+id/editProfileLl"
-                        android:layout_width="wrap_content"
+                    <RelativeLayout
+                        android:id="@+id/rlProfileView"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_alignParentEnd="true"
-                        android:gravity="center"
-                        android:visibility="gone">
+                        android:padding="16dp"
+                        android:background="@color/white"
+                        android:visibility="visible">
 
-                        <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/ic_edit"
-                            app:tint="@color/colorPrimary"
-                            />
-
-                        <TextView
+                        <LinearLayout
+                            android:id="@+id/editProfileLl"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Edit Profile"
-                            android:textSize="12sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/colorPrimary"/>
-
-                    </LinearLayout>
-
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/ivUser"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/no_img"
-                        app:civ_border_width="2dp"
-                        app:civ_border_color="@color/colorPrimary"
-                        android:layout_centerHorizontal="true"
-                        />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginLeft="16dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_below="@+id/ivUser"
-                        android:layout_marginTop="16dp">
-
-                        <TextView
-                            android:id="@+id/tvName"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Guest User"
-                            android:textSize="16sp"
-                            android:textColor="@color/black"
-                            android:textStyle="bold"
-                            android:layout_gravity="center_horizontal"
-                            />
-
-                        <TextView
-                            android:id="@+id/tvPhone"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="+91 9046894517"
-                            android:textSize="13sp"
-                            android:textStyle="normal"
-                            android:layout_gravity="center_horizontal"
-                            />
-
-                        <TextView
-                            android:id="@+id/tvAdr"
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
-                            android:text="College more, sector-v, saltlake, kolkata, 723133"
-                            android:textSize="13sp"
-                            android:textStyle="normal"
+                            android:orientation="vertical"
+                            android:layout_alignParentEnd="true"
                             android:gravity="center"
-                            android:layout_gravity="center_horizontal"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_edit"
+                                app:tint="@color/colorPrimary"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Edit Profile"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorPrimary"/>
+
+                        </LinearLayout>
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ivUser"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/no_img"
+                            app:civ_border_width="2dp"
+                            app:civ_border_color="@color/colorPrimary"
+                            android:layout_centerHorizontal="true"
                             />
-
-
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
                             android:orientation="vertical"
-                            android:layout_gravity="center">
+                            android:layout_marginLeft="16dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/ivUser"
+                            android:layout_marginTop="16dp">
 
                             <TextView
+                                android:id="@+id/tvName"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Total Lib Coins"
-                                android:textSize="12sp"
+                                android:text="Guest User"
+                                android:textSize="16sp"
                                 android:textColor="@color/black"
                                 android:textStyle="bold"
-                                android:layout_marginTop="4dp"
-                                android:layout_gravity="center"
-                                android:textAllCaps="true"
-                                android:backgroundTint="@color/gray"
+                                android:layout_gravity="center_horizontal"
                                 />
 
                             <TextView
-                                android:id="@+id/tvLibCoins"
+                                android:id="@+id/tvPhone"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="200"
-                                android:textSize="32sp"
-                                android:textColor="@color/colorPrimary"
-                                android:textStyle="bold"
-                                android:layout_marginTop="4dp"
-                                android:layout_gravity="center"
-                                android:backgroundTint="@color/gray"
-                                />
-
-                            <TextView
-                                android:id="@+id/tvRedeem"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Redeem"
-                                android:textSize="14sp"
-                                android:textColor="@color/white"
+                                android:text="+91 9046894517"
+                                android:textSize="13sp"
                                 android:textStyle="normal"
-                                android:paddingTop="10dp"
-                                android:paddingBottom="10dp"
-                                android:paddingLeft="39dp"
-                                android:paddingRight="39dp"
-                                android:background="@drawable/round_line_bg"
-                                android:layout_marginTop="4dp"
-                                android:backgroundTint="@color/colorPrimary"
+                                android:layout_gravity="center_horizontal"
                                 />
+
+                            <TextView
+                                android:id="@+id/tvAdr"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:text="College more, sector-v, saltlake, kolkata, 723133"
+                                android:textSize="13sp"
+                                android:textStyle="normal"
+                                android:gravity="center"
+                                android:layout_gravity="center_horizontal"
+                                />
+
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:orientation="vertical"
+                                android:layout_gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Total Lib Coins"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_gravity="center"
+                                    android:textAllCaps="true"
+                                    android:backgroundTint="@color/gray"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/tvLibCoins"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="200"
+                                    android:textSize="32sp"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textStyle="bold"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_gravity="center"
+                                    android:backgroundTint="@color/gray"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/tvRedeem"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Redeem"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/white"
+                                    android:textStyle="normal"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="39dp"
+                                    android:paddingRight="39dp"
+                                    android:background="@drawable/round_line_bg"
+                                    android:layout_marginTop="4dp"
+                                    android:backgroundTint="@color/colorPrimary"
+                                    />
+                            </LinearLayout>
+
                         </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/btnLogout"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/btn_bg"
+                        android:textSize="14sp"
+                        android:text="Logout"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:backgroundTint="@color/yellow"
+                        android:layout_marginBottom="8dp"
+                        android:layout_below="@+id/rlProfileView"
+                        android:layout_marginHorizontal="32dp"
+                        android:visibility="gone"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_below="@+id/btnLogout"
+                        android:layout_marginTop="4dp"
+                        android:padding="8dp"
+                        >
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardEditProfile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="6dp"
+                            android:clickable="true"
+                            android:background="?attr/selectableItemBackgroundBorderless">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="6dp"
+                                android:background="#DDE9FD">
+
+                                <ImageView
+                                    android:id="@+id/ivEdit"
+                                    android:layout_width="38dp"
+                                    android:layout_height="38dp"
+                                    android:src="@drawable/user_edit"
+                                    android:padding="5dp"
+                                    app:tint="@color/black_fade"
+                                    />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Edit Profile"
+                                    android:layout_toRightOf="@+id/ivEdit"
+                                    android:layout_centerVertical="true"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/black_fade"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_toLeftOf="@+id/ivArrowEdit"
+                                    />
+
+                                <ImageView
+                                    android:id="@+id/ivArrowEdit"
+                                    android:layout_width="38dp"
+                                    android:layout_height="38dp"
+                                    android:src="@drawable/ic_arrow_forward"
+                                    android:padding="4dp"
+                                    app:tint="@color/black_fade"
+                                    android:layout_alignParentEnd="true"
+                                    />
+
+                            </RelativeLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardWishList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="6dp"
+                            android:clickable="true"
+                            android:background="?attr/selectableItemBackgroundBorderless">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="6dp"
+                                android:background="#DDE9FD">
+
+                                <ImageView
+                                    android:id="@+id/ivWish"
+                                    android:layout_width="38dp"
+                                    android:layout_height="38dp"
+                                    android:src="@drawable/ic_fill_fav"
+                                    android:padding="6dp"
+                                    app:tint="@color/black_fade"
+                                    />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Wishlisted Books"
+                                    android:layout_toRightOf="@+id/ivWish"
+                                    android:layout_centerVertical="true"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/black_fade"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_toLeftOf="@+id/ivArrowWish"
+                                    />
+
+                                <ImageView
+                                    android:id="@+id/ivArrowWish"
+                                    android:layout_width="38dp"
+                                    android:layout_height="38dp"
+                                    android:src="@drawable/ic_arrow_forward"
+                                    android:padding="4dp"
+                                    app:tint="@color/black_fade"
+                                    android:layout_alignParentEnd="true"
+                                    />
+
+                            </RelativeLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardManageAlert"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="6dp"
+                            android:clickable="true"
+                            android:background="?attr/selectableItemBackgroundBorderless">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="6dp"
+                                android:background="#DDE9FD">
+
+                                <ImageView
+                                    android:id="@+id/ivAlert"
+                                    android:layout_width="38dp"
+                                    android:layout_height="38dp"
+                                    android:src="@drawable/settings"
+                                    android:padding="8dp"
+                                    app:tint="@color/black_fade"
+                                    />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Manage Alerts"
+                                    android:layout_toRightOf="@+id/ivAlert"
+                                    android:layout_centerVertical="true"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/black_fade"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_toLeftOf="@+id/ivArrowAlert"
+                                    />
+
+                                <ImageView
+                                    android:id="@+id/ivArrowAlert"
+                                    android:layout_width="38dp"
+                                    android:layout_height="38dp"
+                                    android:src="@drawable/ic_arrow_forward"
+                                    android:padding="4dp"
+                                    app:tint="@color/black_fade"
+                                    android:layout_alignParentEnd="true"
+                                    />
+
+                            </RelativeLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardDelete"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="6dp"
+                            android:clickable="true"
+                            android:background="?attr/selectableItemBackgroundBorderless">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="6dp"
+                                android:background="#DDE9FD">
+
+                                <ImageView
+                                    android:id="@+id/ivDelete"
+                                    android:layout_width="38dp"
+                                    android:layout_height="38dp"
+                                    android:src="@drawable/ic_delete"
+                                    android:padding="5dp"
+                                    app:tint="@color/black_fade"
+                                    />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Delete Account"
+                                    android:layout_toRightOf="@+id/ivDelete"
+                                    android:layout_centerVertical="true"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/black_fade"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_toLeftOf="@+id/ivArrowDelete"
+                                    />
+
+                                <ImageView
+                                    android:id="@+id/ivArrowDelete"
+                                    android:layout_width="38dp"
+                                    android:layout_height="38dp"
+                                    android:src="@drawable/ic_arrow_forward"
+                                    android:padding="4dp"
+                                    app:tint="@color/black_fade"
+                                    android:layout_alignParentEnd="true"
+                                    />
+
+                            </RelativeLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
 
                     </LinearLayout>
 
+                    <Button
+                        android:id="@+id/btnDeleteAccount"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/btn_bg"
+                        android:textSize="14sp"
+                        android:text="Delete Account"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:backgroundTint="@color/red"
+                        android:layout_marginBottom="8dp"
+                        android:layout_below="@+id/btnLogout"
+                        android:layout_marginHorizontal="32dp"
+                        android:visibility="gone"/>
+
                 </RelativeLayout>
 
-                <Button
-                    android:id="@+id/btnLogout"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:layout_marginTop="12dp"
-                    android:background="@drawable/btn_bg"
-                    android:textSize="14sp"
-                    android:text="Logout"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    android:textAllCaps="false"
-                    android:backgroundTint="@color/yellow"
-                    android:layout_marginBottom="8dp"
-                    android:layout_below="@+id/rlProfileView"
-                    android:layout_marginHorizontal="32dp"/>
+                <LinearLayout
+                    android:id="@+id/llLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:visibility="gone">
 
-                <Button
-                    android:id="@+id/btnDeleteAccount"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:layout_marginTop="12dp"
-                    android:background="@drawable/btn_bg"
-                    android:textSize="14sp"
-                    android:text="Delete Account"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    android:textAllCaps="false"
-                    android:backgroundTint="@color/red"
-                    android:layout_marginBottom="8dp"
-                    android:layout_below="@+id/btnLogout"
-                    android:layout_marginHorizontal="32dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="You are not Logged in user.\nPlease Login"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/tvLogin"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="Login"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:background="@drawable/white_btn"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="8dp"
+                        />
+
+
+                </LinearLayout>
+
 
             </RelativeLayout>
 
-            <LinearLayout
-                android:id="@+id/llLogin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:visibility="gone">
+        </androidx.core.widget.NestedScrollView>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="You are not Logged in user.\nPlease Login"
-                    android:gravity="center"/>
-
-                <TextView
-                    android:id="@+id/tvLogin"
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
-                    android:text="Login"
-                    android:textSize="14sp"
-                    android:gravity="center"
-                    android:textStyle="bold"
-                    android:backgroundTint="@color/colorPrimary"
-                    android:background="@drawable/white_btn"
-                    android:textColor="@color/white"
-                    android:layout_marginTop="8dp"
-                    />
-
-
-            </LinearLayout>
-
-
-        </RelativeLayout>
 
     </RelativeLayout>
 

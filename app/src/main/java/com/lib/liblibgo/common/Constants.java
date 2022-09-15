@@ -108,6 +108,7 @@ public class Constants {
     public static String giveAwayCommunity = "";
     public static String sortingValueCommunity = "";
 
+    public static String selectedCategoryName = "";
 
     public static List<NearMeFilterModel> myNearbyListCommunity = new ArrayList<>();
 

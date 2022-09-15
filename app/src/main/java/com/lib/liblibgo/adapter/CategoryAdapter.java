@@ -70,6 +70,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
                 @Override
                 public void onClick(View view) {
                     Constants.selectedCategoriesCommunity = mList.get(getAdapterPosition()).getCategory_id();
+                    Constants.selectedCategoryName = mList.get(getAdapterPosition()).getCategory_name();
                     Intent intent = new Intent(mCtx, BookCatActivity.class);
                     mCtx.startActivity(intent);
                 }

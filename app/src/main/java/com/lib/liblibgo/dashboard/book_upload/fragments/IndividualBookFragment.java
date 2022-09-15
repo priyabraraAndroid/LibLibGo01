@@ -356,7 +356,7 @@ public class IndividualBookFragment extends Fragment{
                     price = (int)(Integer.parseInt(etMrp.getText().toString()) / 100) * conditionValue +1;
                 }
 
-                if (radioButton.getText().equals("Sale")){
+                if (radioButton.getText().equals("Sell")){
                     saleType = "For Sale";
                     rbSale.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorPrimary)));
                     rbRent.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.black_fade)));

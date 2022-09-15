@@ -189,6 +189,7 @@ public class NewHomeFragment extends Fragment {
     List<MyOwnBooksModel.ResModelData.MyBookList> myList = new ArrayList<>();
     private RelativeLayout rlSellBackView;
     private Button btnSaleBack;
+    private LinearLayout llCommunityText;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -230,6 +231,7 @@ public class NewHomeFragment extends Fragment {
         btnSaleBack = (Button) view.findViewById(R.id.btnSaleBack);
 
         llAllBooksFilter = (LinearLayout)view.findViewById(R.id.llAllBooksFilter);
+        llCommunityText = (LinearLayout)view.findViewById(R.id.llCommunityText);
 
         //Fetch Banner image.....
         getSliderData();
@@ -968,12 +970,14 @@ public class NewHomeFragment extends Fragment {
                 if (response.isSuccessful()){
                     if (response.body().getResponse().getCode().equals("1")){
                         tvCommunityTxt.setVisibility(View.VISIBLE);
+                        llCommunityText.setVisibility(View.VISIBLE);
                         tvCommunitySeeAll.setVisibility(View.VISIBLE);
                         progNearMe.setVisibility(View.GONE);
                         nearMeList = new ArrayList<>();
                         nearMeList = response.body().getResponse().getBook_list();
                         if (nearMeList.size() > 0){
                             tvCommunityTxt.setVisibility(View.VISIBLE);
+                            llCommunityText.setVisibility(View.VISIBLE);
                             tvCommunitySeeAll.setVisibility(View.VISIBLE);
                             adapter = new BookAdapterNew(nearMeList, getContext());
                             LinearLayoutManager verticalManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
@@ -981,16 +985,19 @@ public class NewHomeFragment extends Fragment {
                             rvNearMeBooks.setAdapter(adapter);
                         }else {
                             tvCommunityTxt.setVisibility(View.GONE);
+                            llCommunityText.setVisibility(View.GONE);
                             tvCommunitySeeAll.setVisibility(View.GONE);
                         }
                     }else {
                         tvCommunityTxt.setVisibility(View.GONE);
+                        llCommunityText.setVisibility(View.GONE);
                         tvCommunitySeeAll.setVisibility(View.GONE);
                         progNearMe.setVisibility(View.GONE);
                         //Toast.makeText(mContext, ""+response.body().getResponse().getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 }else {
                     tvCommunityTxt.setVisibility(View.GONE);
+                    llCommunityText.setVisibility(View.GONE);
                     tvCommunitySeeAll.setVisibility(View.GONE);
                     progNearMe.setVisibility(View.GONE);
                     Toast.makeText(mContext, "Something went wrong!", Toast.LENGTH_SHORT).show();
@@ -1000,6 +1007,7 @@ public class NewHomeFragment extends Fragment {
             @Override
             public void onFailure(Call<BooksModel> call, Throwable t) {
                 tvCommunityTxt.setVisibility(View.GONE);
+                llCommunityText.setVisibility(View.GONE);
                 tvCommunitySeeAll.setVisibility(View.GONE);
                 progNearMe.setVisibility(View.GONE);
                 Toast.makeText(mContext, ""+t.getMessage(), Toast.LENGTH_SHORT).show();

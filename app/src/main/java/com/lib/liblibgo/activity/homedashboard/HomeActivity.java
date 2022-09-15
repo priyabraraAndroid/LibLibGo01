@@ -65,6 +65,7 @@ import com.lib.liblibgo.dashboard.apartment_admin.UploadBookDetails;
 import com.lib.liblibgo.dashboard.book_details.BookCatActivity;
 import com.lib.liblibgo.dashboard.book_details.CartActivity;
 import com.lib.liblibgo.dashboard.book_details.WishListActivity;
+import com.lib.liblibgo.dashboard.book_upload.UploadBookActivity;
 import com.lib.liblibgo.dashboard.library.CreateLibraryActivity;
 import com.lib.liblibgo.dashboard.library.LibraryActivity;
 import com.lib.liblibgo.dashboard.notification.NotificationActivity;
@@ -119,6 +120,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     private SharedPreferences sharedpreferences;
     private SharedPreferences.Editor editor;
     private int cartCount;
+    private ImageView ivAddBook;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -169,6 +171,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         layoutDashboard = findViewById(R.id.layout_dashboard);
         layoutAddBook = findViewById(R.id.layoutAddBook);
         layoutOutOrder = findViewById(R.id.layoutOutOrder);
+        ivAddBook = findViewById(R.id.ivAddBook);
 
         sliderView = findViewById(R.id.slider);
 
@@ -207,6 +210,44 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
         //getSliderData();
+
+        ivAddBook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (database.getUserId().equals("")){
+                    Intent intentHome = new Intent(HomeActivity.this, LoginWithPhoneNumber.class);
+                    startActivity(intentHome);
+                }else {
+                    //isApartmentLibraryCreated();
+                    editor.putString("community_id","0");
+                    editor.commit();
+                    Intent intent = new Intent(HomeActivity.this, UploadBookActivity.class);
+                    Constants.isOwnLibrary = false;
+                    Constants.libraryType = "virtual";
+                    intent.putExtra("name","");
+                    intent.putExtra("author","");
+                    intent.putExtra("isbn","");
+                    intent.putExtra("publish_date","");
+                    intent.putExtra("description","");
+                    intent.putExtra("imgUrl","");
+                    intent.putExtra("rental_price","");
+                    intent.putExtra("rental_duration","");
+                    intent.putExtra("book_price","");
+                    intent.putExtra("category_id","");
+                    intent.putExtra("category_name","");
+                    intent.putExtra("shelf_id","");
+                    intent.putExtra("shelf_name","");
+                    intent.putExtra("book_id","");
+                    intent.putExtra("mrp","");
+                    intent.putExtra("quantity","");
+                    intent.putExtra("sale_type","");
+                    intent.putExtra("book_condition","");
+                    intent.putExtra("security_money","");
+                    intent.putExtra("giveaway_status","no");
+                    startActivity(intent);
+                }
+            }
+        });
 
         // menu initialize
         tvUserName = findViewById(R.id.UserName);

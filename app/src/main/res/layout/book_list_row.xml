@@ -46,7 +46,7 @@
                 android:id="@+id/tvBookAuthor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="By D B John"
+                android:text="- D B John"
                 android:textColor="@color/light_black"
                 android:textSize="12sp"
                 android:textStyle="normal"
@@ -70,23 +70,16 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:id="@+id/llBuy"
+                        android:id="@+id/llRent"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Buy at "
-                            android:textSize="12sp"
-                            android:layout_gravity="center"
-                            />
+                        android:layout_height="wrap_content"
+                        android:visibility="visible">
 
                         <TextView
                             android:id="@+id/tvBookPrice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="\u20B9 150"
+                            android:text="\u20B91500"
                             android:textColor="@color/colorPrimary"
                             android:textSize="13sp"
                             android:textStyle="normal"
@@ -95,26 +88,24 @@
                             android:ellipsize="end"
                             />
 
-                    </LinearLayout>
-                    <LinearLayout
-                        android:id="@+id/llRent"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:visibility="visible">
-
                         <TextView
+                            android:id="@+id/tvPriceDiv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Rent/day at "
-                            android:textSize="12sp"
+                            android:text=" - "
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
                             android:layout_gravity="center"
+                            android:maxLines="1"
+                            android:ellipsize="end"
                             />
 
                         <TextView
                             android:id="@+id/tvBookRentPrice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="\u20B9 150"
+                            android:text="\u20B9150/day"
                             android:textColor="@color/colorPrimary"
                             android:textSize="13sp"
                             android:textStyle="normal"
@@ -131,15 +122,17 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="visible"
-            android:background="@drawable/trans_txt_bg"
+            android:id="@+id/llLocation"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:visibility="gone"
+            android:background="#99000000"
             android:paddingLeft="8dp"
             android:paddingRight="16dp"
             android:paddingVertical="4dp"
-            android:layout_marginTop="8dp"
-            android:gravity="center">
+            android:layout_marginTop="110dp"
+            android:gravity="center_vertical"
+            >
 
             <ImageView
                 android:id="@+id/iv_pin"
@@ -147,7 +140,8 @@
                 android:layout_height="13dp"
                 android:src="@drawable/ic_location"
                 app:tint="@color/white"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                />
 
             <TextView
                 android:id="@+id/tvmetter"

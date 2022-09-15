@@ -58,7 +58,6 @@ public class PrivacyPolicyActivity extends AppCompatActivity implements Advanced
         mWebView.setWebViewClient(new WebViewClient() {
             @Override
             public void onPageFinished(WebView view, String url) {
-                //Toast.makeText(HomeActivity.this, "Finished loading", Toast.LENGTH_SHORT).show();
                 progBar.setVisibility(View.GONE);
             }
         });
@@ -67,7 +66,6 @@ public class PrivacyPolicyActivity extends AppCompatActivity implements Advanced
             @Override
             public void onReceivedTitle(WebView view, String title) {
                 super.onReceivedTitle(view, title);
-                //Toast.makeText(HomeActivity.this, title, Toast.LENGTH_SHORT).show();
                 progBar.setVisibility(View.VISIBLE);
             }
 

@@ -11,6 +11,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
@@ -88,6 +89,10 @@ public class ProfileFragment extends Fragment implements PaymentResultListener {
     private MyTextView menuEditProfile,menuPrivacyPolicy,menuAboutUs,menuTermCondition,menuContactUs,menuSettings,wishList,menuLogout;
     private LinearLayout llSetting;
     private View viewSetting;
+    private CardView cardEditProfile;
+    private CardView cardWishList;
+    private CardView cardManageAlert;
+    private CardView cardDelete;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -111,6 +116,11 @@ public class ProfileFragment extends Fragment implements PaymentResultListener {
         rlLoginUser = (RelativeLayout)view.findViewById(R.id.rlLoginUser);
         llLogin = (LinearLayout)view.findViewById(R.id.llLogin);
 
+        cardEditProfile = (CardView)view.findViewById(R.id.cardEditProfile);
+        cardWishList = (CardView)view.findViewById(R.id.cardWishList);
+        cardManageAlert = (CardView)view.findViewById(R.id.cardManageAlert);
+        cardDelete = (CardView)view.findViewById(R.id.cardDelete);
+
         database = new UserDatabase(mContext);
         sharedpreferences = mContext.getSharedPreferences(HomeActivity.MyPREFERENCES, Context.MODE_PRIVATE);
         editor = sharedpreferences.edit();
@@ -128,22 +138,21 @@ public class ProfileFragment extends Fragment implements PaymentResultListener {
         viewSetting = view.findViewById(R.id.viewSetting);
         wishList = view.findViewById(R.id.wishList);
 
-
         if (database.getUserId().equals("")){
             llLogin.setVisibility(View.VISIBLE);
             rlLoginUser.setVisibility(View.GONE);
-            menuEditProfile.setVisibility(View.GONE);
-            llSetting.setVisibility(View.GONE);
-            viewSetting.setVisibility(View.GONE);
-            wishList.setVisibility(View.GONE);
+            //menuEditProfile.setVisibility(View.GONE);
+            //llSetting.setVisibility(View.GONE);
+            //viewSetting.setVisibility(View.GONE);
+            //wishList.setVisibility(View.GONE);
             menuLogout.setText("Login");
         }else {
             rlLoginUser.setVisibility(View.VISIBLE);
             llLogin.setVisibility(View.GONE);
-            menuEditProfile.setVisibility(View.VISIBLE);
-            llSetting.setVisibility(View.VISIBLE);
-            viewSetting.setVisibility(View.VISIBLE);
-            wishList.setVisibility(View.VISIBLE);
+            //menuEditProfile.setVisibility(View.VISIBLE);
+            //llSetting.setVisibility(View.VISIBLE);
+            //viewSetting.setVisibility(View.VISIBLE);
+            //wishList.setVisibility(View.VISIBLE);
             menuLogout.setText("Logout");
             getUserDetails();
         }
@@ -168,7 +177,7 @@ public class ProfileFragment extends Fragment implements PaymentResultListener {
             }
         });
 
-        editProfileLl.setOnClickListener(new View.OnClickListener() {
+        cardEditProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intentHome = new Intent(mContext, UserProfileActivity.class);
@@ -176,7 +185,7 @@ public class ProfileFragment extends Fragment implements PaymentResultListener {
             }
         });
 
-        btnDeleteAccount.setOnClickListener(new View.OnClickListener() {
+        cardDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(mContext);
@@ -261,7 +270,7 @@ public class ProfileFragment extends Fragment implements PaymentResultListener {
             }
         });
 
-        wishList.setOnClickListener(new View.OnClickListener() {
+        cardWishList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (database.getUserId().equals("")){
@@ -274,7 +283,7 @@ public class ProfileFragment extends Fragment implements PaymentResultListener {
             }
         });
 
-        menuSettings.setOnClickListener(new View.OnClickListener() {
+        cardManageAlert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intentHome = new Intent(getContext(), SettingsActivity.class);
@@ -433,18 +442,18 @@ public class ProfileFragment extends Fragment implements PaymentResultListener {
                             if (database.getUserId().equals("")){
                                 llLogin.setVisibility(View.VISIBLE);
                                 rlLoginUser.setVisibility(View.GONE);
-                                menuEditProfile.setVisibility(View.GONE);
-                                llSetting.setVisibility(View.GONE);
-                                viewSetting.setVisibility(View.GONE);
-                                wishList.setVisibility(View.GONE);
+                                //menuEditProfile.setVisibility(View.GONE);
+                                //llSetting.setVisibility(View.GONE);
+                                //viewSetting.setVisibility(View.GONE);
+                                //wishList.setVisibility(View.GONE);
                                 menuLogout.setText("Login");
                             }else {
                                 rlLoginUser.setVisibility(View.VISIBLE);
                                 llLogin.setVisibility(View.GONE);
-                                menuEditProfile.setVisibility(View.VISIBLE);
-                                llSetting.setVisibility(View.VISIBLE);
-                                viewSetting.setVisibility(View.VISIBLE);
-                                wishList.setVisibility(View.VISIBLE);
+                                //menuEditProfile.setVisibility(View.VISIBLE);
+                                //llSetting.setVisibility(View.VISIBLE);
+                                //viewSetting.setVisibility(View.VISIBLE);
+                                //wishList.setVisibility(View.VISIBLE);
                                 menuLogout.setText("Logout");
                             }
 
